@@ -9,6 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.image
   module:
     - image
+_core:
+  default_config_hash: iUmLq_kQJc4Uj-fCC1mI881-J8ZdCAySEp8_hjYmxp0
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image

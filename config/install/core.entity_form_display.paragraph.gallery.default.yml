@@ -7,7 +7,9 @@ dependencies:
     - field.field.paragraph.gallery.field_images
     - paragraphs.paragraphs_type.gallery
   module:
-    - paragraphs
+    - file_browser
+_core:
+  default_config_hash: vNf15WHnmawlTlrBDHgi4jAANx_TwwktXcArmweOwbY
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
@@ -21,15 +23,17 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_images:
-    type: entity_reference_paragraphs
     weight: 1
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
+      entity_browser: browse_files_modal
+      field_widget_edit: '1'
+      field_widget_remove: '1'
+      view_mode: default
+      field_widget_display: ''
+      open: 0
+      field_widget_display_settings: {  }
     third_party_settings: {  }
+    type: file_browser
 hidden:
   created: true
   status: true

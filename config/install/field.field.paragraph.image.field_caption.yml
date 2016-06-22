@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_caption
     - paragraphs.paragraphs_type.image
+_core:
+  default_config_hash: JBFM9hCFJgmw7jqMFA6MiY6vyvIYnjp36VDY72107fg
 id: paragraph.image.field_caption
 field_name: field_caption
 entity_type: paragraph

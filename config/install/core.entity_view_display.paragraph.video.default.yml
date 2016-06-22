@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - link
+_core:
+  default_config_hash: p0Uj-rn6NXoC1GkAESAdkxJcS3H8eRq1sZGy6VMXdX8
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video

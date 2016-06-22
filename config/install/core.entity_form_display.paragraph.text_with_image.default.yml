@@ -7,11 +7,12 @@ dependencies:
     - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_text
     - field.field.paragraph.text_with_image.field_text_with_image_layout
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.text_with_image
   module:
-    - image
+    - file_browser
     - text
+_core:
+  default_config_hash: qAhCCJoLPPkJObWbNt4NCBASkJi7jWtekpuz_bFRqdo
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
 bundle: text_with_image
@@ -27,10 +28,15 @@ content:
   field_image:
     weight: 2
     settings:
-      progress_indicator: throbber
-      previeimage_style: thumbnail
+      entity_browser: browse_files_modal
+      field_widget_edit: '1'
+      field_widget_remove: '1'
+      view_mode: default
+      field_widget_display: ''
+      open: 0
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: image_image
+    type: file_browser
   field_text:
     weight: 1
     settings:

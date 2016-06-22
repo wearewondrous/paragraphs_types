@@ -5,10 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.image.field_caption
     - field.field.paragraph.image.field_image
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.image
   module:
-    - image
+    - file_browser
+_core:
+  default_config_hash: H7P4ToC11IhQjsNStOP9uC1iX-1f_6G-sgyXL6fKvLg
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
@@ -24,10 +25,15 @@ content:
   field_image:
     weight: 0
     settings:
-      progress_indicator: throbber
-      previeimage_style: thumbnail
+      entity_browser: browse_files_modal
+      field_widget_edit: '1'
+      field_widget_remove: '1'
+      view_mode: default
+      field_widget_display: ''
+      open: 0
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: image_image
+    type: file_browser
 hidden:
   created: true
   status: true

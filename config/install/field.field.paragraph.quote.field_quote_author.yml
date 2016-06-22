@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_quote_author
     - paragraphs.paragraphs_type.quote
+_core:
+  default_config_hash: YIdhmYhpS7C477Ynls8tp2cIJYwHhfugDw5e-7s0vzw
 id: paragraph.quote.field_quote_author
 field_name: field_quote_author
 entity_type: paragraph

@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_image
   module:
     - text
+_core:
+  default_config_hash: 5h64sJJBEPviRUpt_sd-9ivKRnkgjaXlENoGiDsAyeI
 id: paragraph.text_with_image.field_text
 field_name: field_text
 entity_type: paragraph

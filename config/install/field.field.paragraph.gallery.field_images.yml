@@ -1,4 +1,4 @@
-uuid: 19693f9e-8cd1-4880-9307-7bcba14d507d
+uuid: b94dfa39-434c-4510-a594-435988d0dd00
 langcode: en
 status: true
 dependencies:
@@ -6,39 +6,33 @@ dependencies:
     - field.storage.paragraph.field_images
     - paragraphs.paragraphs_type.gallery
   module:
-    - entity_reference_revisions
+    - image
 id: paragraph.gallery.field_images
 field_name: field_images
 entity_type: paragraph
 bundle: gallery
-label: Images
+label: images
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:paragraph'
-  handler_settings:
-    target_bundles:
-      image: image
-    target_bundles_drag_drop:
-      gallery:
-        weight: 7
-        enabled: false
-      image:
-        enabled: true
-        weight: 8
-      quote:
-        weight: 9
-        enabled: false
-      text:
-        weight: 10
-        enabled: false
-      text_with_image:
-        weight: 11
-        enabled: false
-      video:
-        weight: 12
-        enabled: false
-field_type: entity_reference_revisions
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

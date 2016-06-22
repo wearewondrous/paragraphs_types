@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.quote.field_quote_author
     - field.field.paragraph.quote.field_text_plain
     - paragraphs.paragraphs_type.quote
+_core:
+  default_config_hash: oZC6NSapuhyEKnkGoF5HOcrmcd6dH6ZvoSlbASiUcY0
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote

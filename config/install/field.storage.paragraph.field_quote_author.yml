@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: K5vOEnqK3OuezucSjvojqfhyyCPOmVAReUDfKYXKfx4
 id: paragraph.field_quote_author
 field_name: field_quote_author
 entity_type: paragraph

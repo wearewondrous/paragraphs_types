@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: dsyMxmNn6Quvw9B1Vc1VhSUNsPgBk9aK6ClMMomO7ko
 id: paragraph.field_caption
 field_name: field_caption
 entity_type: paragraph

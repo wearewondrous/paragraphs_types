@@ -7,7 +7,9 @@ dependencies:
     - field.field.paragraph.gallery.field_images
     - paragraphs.paragraphs_type.gallery
   module:
-    - entity_reference_revisions
+    - image
+_core:
+  default_config_hash: 4ZqMFIHWa4kXeyTgVhg8sagjvvesaSbZEHXRZkybMWY
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
@@ -21,13 +23,13 @@ content:
     third_party_settings: {  }
     type: string
   field_images:
-    type: entity_reference_revisions_entity_view
     weight: 1
-    label: hidden
+    label: above
     settings:
-      viemode: default
-      link: ''
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
+    type: image
 hidden:
   created: true
   uid: true

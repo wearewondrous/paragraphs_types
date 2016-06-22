@@ -14,7 +14,7 @@ dependencies:
     - options
     - text
 _core:
-  default_config_hash: 2Cn1-LuZCgsrrwgnwKkDfVY5Il5FLomJFP82IyEWr5A
+  default_config_hash: w-zhM0Cuvknu4xEAYVHQuDOUuMm4f4Qvi_Rb8Okmmfo
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
 bundle: text_with_image

@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - link
+_core:
+  default_config_hash: q_JG_CBKEODdh2ZX1rpPYrDCnE2PgEpXSJNVFab08_4
 id: paragraph.video.field_url
 field_name: field_url
 entity_type: paragraph

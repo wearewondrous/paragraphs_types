@@ -2,5 +2,7 @@ uuid: 0f9fb06e-5fab-431e-8300-b069d83be342
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: MRD3-jyuj34PGuo2mfujYTmyBFdLZmYRNvSDZD6W-aI
 id: gallery
 label: Gallery
