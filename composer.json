@@ -8,16 +8,16 @@
   "repositories": [
     {
       "type": "composer",
-      "url":  "https://packages.drupal.org/8"
+      "url":  "https://packagist.drupal-composer.org"
     }
   ],
   "require": {
     "drupal/paragraphs": "~1.0",
-    "drupal/file_browser": "dev-1.0.x",
-    "drupal/entity_browser": "dev-1.0.x",
-    "drupal/entity_embed": "dev-1.0.x",
-    "drupal/embed": "dev-1.0.x",
-    "drupal/dropzonejs": "dev-1.0.x",
-    "drupal/ctools": "dev-3.0.x"
+    "drupal/file_browser": "dev-8.x-1.x",
+    "drupal/entity_browser": "dev-8.x-1.x",
+    "drupal/entity_embed": "dev-8.x-1.x",
+    "drupal/embed": "dev-8.x-1.x",
+    "drupal/dropzonejs": "dev-8.x-1.x",
+    "drupal/ctools": "dev-8.x-3.x"
   }
 }
