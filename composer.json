@@ -2,11 +2,11 @@
   "name": "drupal/paragraphs_types",
   "type": "drupal-module",
   "description": "paragraphs types",
-  "keywords": ["Drupal", "Twig"],
+  "keywords": ["Drupal"],
   "license": "MIT",
   "minimum-stability": "dev",
   "require": {
     "drupal/paragraphs": "~1.0",
-    "drupal/file_entity_browser": "1.0.x-dev"
+    "drupal/file_browser": "1.0.x-dev"
   }
 }
