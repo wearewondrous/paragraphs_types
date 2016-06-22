@@ -7,5 +7,5 @@ package: Paragraphs
 configure: paragraphs_types.admin_settings_form
 dependencies:
   - paragraphs
-  - file_entity_browser
+  - file_browser
   - dropzonejs
