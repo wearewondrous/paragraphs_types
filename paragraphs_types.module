@@ -67,7 +67,7 @@ function paragraphs_types_page_attachments(array &$page) {
  * Implements hook_preprocess_HOOK() for field.html.twig.
  */
 function base_preprocess_paragraph(&$variables) {
-  $variables['viemode'] = $variables['elements']['#viemode'];
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
   $variables['paragraph'] = $variables['elements']['#paragraph'];
 
   // Helpful $content variable for templates.
@@ -229,12 +229,12 @@ function paragraphs_types_uninstall(){
 		'field.storage.paragraph.field_text_with_image_layout',
 		'field.field.paragraph.text_with_image.field_text_with_image_layout',
 
-		'core.entity_viedisplay.paragraph.gallery.default',
-		'core.entity_viedisplay.paragraph.image.default',
-		'core.entity_viedisplay.paragraph.quote.default',
-		'core.entity_viedisplay.paragraph.text_with_image.default',
-		'core.entity_viedisplay.paragraph.text.default',
-		'core.entity_viedisplay.paragraph.video.default',
+		'core.entity_view_display.paragraph.gallery.default',
+		'core.entity_view_display.paragraph.image.default',
+		'core.entity_view_display.paragraph.quote.default',
+		'core.entity_view_display.paragraph.text_with_image.default',
+		'core.entity_view_display.paragraph.text.default',
+		'core.entity_view_display.paragraph.video.default',
 
 		'core.entity_form_display.paragraph.gallery.default',
 		'core.entity_form_display.paragraph.image.default',
