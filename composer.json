@@ -1,5 +1,5 @@
 {
-  "name": "drupal/paragraphs_tyes",
+  "name": "drupal/paragraphs_types",
   "type": "drupal-module",
   "description": "paragraphs types",
   "keywords": ["Drupal", "Twig"],
