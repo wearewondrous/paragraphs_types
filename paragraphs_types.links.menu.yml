@@ -1,0 +1,5 @@
+paragraphs_types.admin_settings_form:
+  title: 'Paragraphs Types Settings'
+  parent: system.admin_config_system
+  description: 'Configure Paragraphs Types'
+  route_name: paragraphs_types.admin_settings_form

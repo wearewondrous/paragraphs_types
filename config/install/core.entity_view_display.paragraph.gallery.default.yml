@@ -1,0 +1,33 @@
+uuid: 81d2ecd0-9bff-4e1a-be45-696fa2f3f035
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery.field_gallery_headline
+    - field.field.paragraph.gallery.field_images
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - entity_reference_revisions
+id: paragraph.gallery.default
+targetEntityType: paragraph
+bundle: gallery
+mode: default
+content:
+  field_gallery_headline:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_images:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      viemode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

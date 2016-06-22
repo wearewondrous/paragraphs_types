@@ -1,0 +1,19 @@
+{% extends '@paragraphs_types/paragraph.html.twig' %}
+
+{%
+set classes = [
+  'article-basic-block',
+  'rt-content'
+]
+%}
+
+{% block content %}
+  <div{{ attributes.addClass(classes) }}>
+    <blockquote>
+      <p>
+        {{ content.field_w_text_plain }}
+      </p>
+      <p class="quote-source">{{ content.field_w_quote_author }}</p>
+    </blockquote>
+  </div>
+{% endblock %}

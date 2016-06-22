@@ -1,0 +1,32 @@
+{% extends '@paragraphs_types/paragraph.html.twig' %}
+
+{%
+  set classes = [
+    'article-advanced-img-block'
+  ]
+%}
+
+{% if layout == 'image-text' %}
+  {% set classes = classes|merge(['image-on-left']) %}
+{% endif %}
+
+{% if image_is_landscape %}
+  {% set classes = classes|merge(['landscape-image']) %}
+{% endif %}
+
+
+{% block content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="text-column rt-content">
+      {{ content.field_w_text }}
+    </div>
+    <div class="image-column rt-content">
+      <figure>
+        {{ content.field_w_image }}
+        {{ content.field_w_caption }}
+      </figure>
+    </div>
+  </div>
+{% endblock %}
+
+

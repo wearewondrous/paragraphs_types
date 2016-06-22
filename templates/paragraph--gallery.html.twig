@@ -1,0 +1,71 @@
+{% import _self as self %}
+
+{% set images_count = images|length %}
+
+{% macro image_block(class, image) %}
+  {% import _self as self %}
+  <div class="{{ class }}">
+    <a href="#" class="gallery-preview-image js-open-gallery" style="background-image: url('{{ image.sizes.medium  }}')"></a>
+  </div>
+{% endmacro %}
+
+<div class="panel gray">
+  <div class="outer-row">
+    <div class="article-gallery-block">
+      {% if content.field_w_gallery_headline['#items'] is not empty %}
+        <div class="row">
+          <div class="gallery-headline-column">
+            <h2 class="gallery-headline">{{content.field_w_gallery_headline}}</h2>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="row {% if images_count >= 4 %}gallery-first-row{% endif %}">
+      {% if images_count == 1 %}
+        {{ self.image_block('gallery-main-preview-column', images[0]) }}
+
+      {% elseif images_count == 2 %}
+        {{ self.image_block('gallery-main-preview-column', images[0]) }}
+        {{ self.image_block('gallery-main-preview-column', images[1]) }}
+
+      {% elseif images_count == 3 %}
+        {{ self.image_block('gallery-tall-preview-column', images[0]) }}
+        {{ self.image_block('gallery-tall-preview-column', images[1]) }}
+        {{ self.image_block('gallery-main-preview-column', images[2]) }}
+
+      {% elseif images_count >= 4 %}
+        {{ self.image_block('gallery-tall-preview-column', images[0]) }}
+        <div class="gallery-tall-preview-column collapsed">
+          <div class="row">
+            {{ self.image_block('gallery-mini-preview-column', images[1]) }}
+            {{ self.image_block('gallery-mini-preview-column', images[2]) }}
+          </div>
+        </div>
+        {{ self.image_block('gallery-main-preview-column', images[3]) }}
+      {% endif %}
+      </div>
+
+      {% if images_count >= 9 %}
+      <div class="row gallery-second-row">
+        <div class="gallery-main-preview-column collapsed">
+          <div class="row">
+            {{ self.image_block('gallery-mini-preview-column', images[4]) }}
+            {{ self.image_block('gallery-mini-preview-column', images[5]) }}
+            {{ self.image_block('gallery-mini-preview-column', images[6]) }}
+            {{ self.image_block('gallery-mini-preview-column', images[7]) }}
+          </div>
+        </div>
+        {{ self.image_block('gallery-main-preview-column', images[8]) }}
+      </div>
+      {% endif %}
+      <div class="row">
+        <div class="gallery-footer-column">
+          <a href="#" class="js-open-gallery">See the whole gallery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% include '@paragraphs_types/_photoswipe-gallery.html.twig' %}

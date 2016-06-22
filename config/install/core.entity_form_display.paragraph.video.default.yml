@@ -1,0 +1,25 @@
+uuid: efc70001-26ed-480b-a701-1f16b18c1872
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_url
+    - paragraphs.paragraphs_type.video
+  module:
+    - link
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_url:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true

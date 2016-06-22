@@ -1,0 +1,11 @@
+name: Paragraphs Types
+type: module
+description: Paragraphs Types
+core: 8.x
+version: '0.1'
+package: Paragraphs
+configure: paragraphs_types.admin_settings_form
+dependencies:
+  - paragraphs
+  - file_entity_browser
+  - dropzonejs

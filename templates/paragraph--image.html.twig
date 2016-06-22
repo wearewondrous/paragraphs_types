@@ -1,0 +1,14 @@
+{% extends '@paragraphs_types/paragraph.html.twig' %}
+
+{#
+    Variable image with keys: url, caption, sizes (large, medium, small, ..)
+#}
+
+{% block content %}
+  <div{{ attributes.addClass('rt-content') }}>
+    <figure>
+      {{ content.field_w_image }}
+      <p>{{ content.field_w_caption }}</p>
+    </figure>
+  </div>
+{% endblock %}

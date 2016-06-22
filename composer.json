@@ -1,0 +1,12 @@
+{
+  "name": "drupal/paragraphs_tyes",
+  "type": "drupal-module",
+  "description": "paragraphs types",
+  "keywords": ["Drupal", "Twig"],
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/paragraphs": "~1.0",
+    "drupal/file_entity_browser": "1.0.x-dev"
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 20d53b3c-151a-49fd-9202-2cdc57ece8ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gallery_headline
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_gallery_headline
+field_name: field_gallery_headline
+entity_type: paragraph
+bundle: gallery
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

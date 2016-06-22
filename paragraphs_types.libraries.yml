@@ -1,0 +1,10 @@
+paragraphs_types.gallery:
+  version: 1.0
+  css:
+    theme:
+      css/vendor/photoswipe/photoswipe.css: {}
+      css/vendor/photoswipe/skin.css: {}
+  js:
+    js/vendor/photoswipe/photoswipe.min.js: {}
+    js/vendor/photoswipe/photoswipe-ui-default.min.js: {}
+    js/wondrous-gallery.js: {}

@@ -1,0 +1,44 @@
+uuid: 19693f9e-8cd1-4880-9307-7bcba14d507d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_images
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - entity_reference_revisions
+id: paragraph.gallery.field_images
+field_name: field_images
+entity_type: paragraph
+bundle: gallery
+label: Images
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image: image
+    target_bundles_drag_drop:
+      gallery:
+        weight: 7
+        enabled: false
+      image:
+        enabled: true
+        weight: 8
+      quote:
+        weight: 9
+        enabled: false
+      text:
+        weight: 10
+        enabled: false
+      text_with_image:
+        weight: 11
+        enabled: false
+      video:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions
