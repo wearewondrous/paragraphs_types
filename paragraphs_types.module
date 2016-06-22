@@ -88,10 +88,13 @@ function paragraphs_types_preprocess_paragraph__quote(&$variables) {
 function paragraphs_types_preprocess_paragraph__text_with_image(&$variables) {
   base_preprocess_paragraph($variables);
 
-  if (array_key_exists(0, $variables['elements']['field_text_with_image_layout'])) {
+  if (array_key_exists(0,
+    $variables['elements']['field_text_with_image_layout'])) {
     $variables['layout'] = $variables['paragraph']->get('field_text_with_image_layout')->value;
     if ($variables['paragraph']->get('field_image')->first()) {
-        $variables['image_is_landscape'] = $variables['paragraph']->get('field_image')->first()->width > $variables['paragraph']->get('field_image')->first()->height;
+      $variables['image_is_landscape'] = $variables['paragraph']->get('field_image')
+          ->first()->width > $variables['paragraph']->get('field_image')
+          ->first()->height;
     }
   }
 }
@@ -102,11 +105,11 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
 
   $videoUrl = $variables['elements']['field_url'][0]['#url']->getUri();
   $parsedUrl = parse_url($videoUrl);
-  $videoHost = null;
-  $videoID = null;
+  $videoHost = NULL;
+  $videoID = NULL;
 
   // YOUTUBE
-  if (strpos($parsedUrl['host'], 'youtube') !== false) {
+  if (strpos($parsedUrl['host'], 'youtube') !== FALSE) {
     $videoHost = 'youtube';
     parse_str($parsedUrl['query'], $query);
     if (array_key_exists('v', $query)) {
@@ -115,7 +118,7 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
   }
 
   // VIMEO
-  if (strpos($parsedUrl['host'], 'vimeo') !== false) {
+  if (strpos($parsedUrl['host'], 'vimeo') !== FALSE) {
     $videoHost = 'vimeo';
     $videoID = substr(parse_url($videoUrl, PHP_URL_PATH), 1);
   }
@@ -140,11 +143,11 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
 
     $caption = $item->get('field_caption')->value;
     $image = [
-        'url' => file_create_url($file->getFileUri()),
-        'width' => $imageField->width,
-        'height' => $imageField->height,
-        'caption' => $caption,
-        'sizes' => _load_image_sizes($file)
+      'url' => file_create_url($file->getFileUri()),
+      'width' => $imageField->width,
+      'height' => $imageField->height,
+      'caption' => $caption,
+      'sizes' => _load_image_sizes($file)
     ];
 
     $variables['images'][] = $image;
@@ -164,11 +167,11 @@ function paragraphs_types_preprocess_paragraph__image(&$variables) {
 
   $caption = $variables['paragraph']->get('field_caption')->value;
   $variables['image'] = [
-      'url' => file_create_url($file->getFileUri()),
-      'width' => $imageField->width,
-      'height' => $imageField->height,
-      'caption' => $caption,
-      'sizes' => _load_image_sizes($file)
+    'url' => file_create_url($file->getFileUri()),
+    'width' => $imageField->width,
+    'height' => $imageField->height,
+    'caption' => $caption,
+    'sizes' => _load_image_sizes($file)
   ];
 
 }
@@ -183,69 +186,57 @@ function _load_image_sizes($image) {
 }
 
 
-function paragraphs_types_uninstall(){
-	$files = [
-		'paragraphs.paragraphs_type.text',
-		'paragraphs.paragraphs_type.quote',
-		'paragraphs.paragraphs_type.video',
-		'paragraphs.paragraphs_type.image',
-		'paragraphs.paragraphs_type.gallery',
-		'paragraphs.paragraphs_type.text_with_image',
+function paragraphs_types_uninstall() {
+  $files = [
+    'paragraphs.paragraphs_type.text',
+    'paragraphs.paragraphs_type.quote',
+    'paragraphs.paragraphs_type.video',
+    'paragraphs.paragraphs_type.image',
+    'paragraphs.paragraphs_type.gallery',
+    'paragraphs.paragraphs_type.text_with_image',
 
-		'field.field.paragraph.text.field_text',
-		'field.storage.paragraph.field_text',
+    'field.field.paragraph.text.field_text',
+    'field.field.paragraph.quote.field_text_plain',
+    'field.field.paragraph.video.field_url',
+    'field.field.paragraph.quote.field_name',
+    'field.field.paragraph.image.field_image',
+    'field.field.paragraph.image.field_caption',
+    'field.field.paragraph.gallery.field_images',
+    'field.field.paragraph.gallery.field_gallery_headline',
+    'field.field.paragraph.quote.field_quote_author',
+    'field.field.paragraph.text_with_image.field_caption',
+    'field.field.paragraph.text_with_image.field_image',
+    'field.field.paragraph.text_with_image.field_text',
+    'field.field.paragraph.text_with_image.field_text_with_image_layout',
 
-		'field.storage.paragraph.field_url',
-		'field.field.paragraph.video.field_url',
+    'field.storage.paragraph.field_quote_author',
+    'field.storage.paragraph.field_images',
+    'field.storage.paragraph.field_caption',
+    'field.storage.paragraph.field_image',
+    'field.storage.paragraph.field_name',
+    'field.storage.paragraph.field_text_plain',
+    'field.storage.paragraph.field_text',
+    'field.storage.paragraph.field_url',
+    'field.storage.paragraph.field_text_with_image_layout',
+    'field.storage.paragraph.field_gallery_headline',
 
-		'field.field.paragraph.quote.field_text_plain',
-		'field.storage.paragraph.field_text_plain',
+    'core.entity_view_display.paragraph.gallery.default',
+    'core.entity_view_display.paragraph.image.default',
+    'core.entity_view_display.paragraph.quote.default',
+    'core.entity_view_display.paragraph.text_with_image.default',
+    'core.entity_view_display.paragraph.text.default',
+    'core.entity_view_display.paragraph.video.default',
 
-		'field.field.paragraph.quote.field_name',
-		'field.storage.paragraph.field_name',
+    'core.entity_form_display.paragraph.gallery.default',
+    'core.entity_form_display.paragraph.image.default',
+    'core.entity_form_display.paragraph.quote.default',
+    'core.entity_form_display.paragraph.text_with_image.default',
+    'core.entity_form_display.paragraph.text.default',
+    'core.entity_form_display.paragraph.video.default',
 
-		'field.field.paragraph.image.field_image',
-		'field.storage.paragraph.field_image',
-
-		'field.field.paragraph.image.field_caption',
-		'field.storage.paragraph.field_caption',
-
-		'field.field.paragraph.gallery.field_images',
-		'field.storage.paragraph.field_images',
-
-		'field.field.paragraph.gallery.field_gallery_headline',
-		'field.storage.paragraph.field_gallery_headline',
-
-		'field.field.paragraph.quote.field_quote_author',
-		'field.storage.paragraph.field_quote_author',
-
-		'field.field.paragraph.gallery.field_gallery_headline',
-		'field.storage.paragraph.field_gallery_headline',
-
-		'field.field.paragraph.text_with_image.field_caption',
-		'field.field.paragraph.text_with_image.field_image',
-		'field.field.paragraph.text_with_image.field_text',
-
-		'field.storage.paragraph.field_text_with_image_layout',
-		'field.field.paragraph.text_with_image.field_text_with_image_layout',
-
-		'core.entity_view_display.paragraph.gallery.default',
-		'core.entity_view_display.paragraph.image.default',
-		'core.entity_view_display.paragraph.quote.default',
-		'core.entity_view_display.paragraph.text_with_image.default',
-		'core.entity_view_display.paragraph.text.default',
-		'core.entity_view_display.paragraph.video.default',
-
-		'core.entity_form_display.paragraph.gallery.default',
-		'core.entity_form_display.paragraph.image.default',
-		'core.entity_form_display.paragraph.quote.default',
-		'core.entity_form_display.paragraph.text_with_image.default',
-		'core.entity_form_display.paragraph.text.default',
-		'core.entity_form_display.paragraph.video.default',
-
-	];
-	foreach ($files as $file) {
-		\Drupal::configFactory()->getEditable($file)->delete();
-	}
+  ];
+  foreach ($files as $file) {
+    \Drupal::configFactory()->getEditable($file)->delete();
+  }
 
 }
