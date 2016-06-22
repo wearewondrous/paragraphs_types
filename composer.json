@@ -5,13 +5,19 @@
   "keywords": ["Drupal"],
   "license": "MIT",
   "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url":  "https://packages.drupal.org/8"
+    }
+  ],
   "require": {
     "drupal/paragraphs": "~1.0",
-    "drupal/file_browser": "8.x-1.x-dev",
-    "drupal/entity_browser": "8.x-1.x-dev",
-    "drupal/entity_embed": "8.x-1.x-dev",
-    "drupal/embed": "8.x-1.x-dev",
-    "drupal/dropzonejs": "8.x-1.x-dev",
-    "drupal/ctools": "8.x-3.x-dev"
+    "drupal/file_browser": "1.0.x-dev",
+    "drupal/entity_browser": "1.0.x-dev",
+    "drupal/entity_embed": "1.0.x-dev",
+    "drupal/embed": "1.0.x-dev",
+    "drupal/dropzonejs": "1.0.x-dev",
+    "drupal/ctools": "3.0.x-dev"
   }
 }
