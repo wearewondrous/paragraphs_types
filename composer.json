@@ -20,6 +20,7 @@
     "drupal/dropzonejs": "1.0.x-dev",
     "drupal/ctools": "3.0.x-dev",
     "drupal/inline_entity_form": "1.0.x-dev",
-    "drupal/token": "1.0.x-dev"
+    "drupal/token": "1.0.x-dev",
+    "drupal/file_entity": "~2.0"
   }
 }
