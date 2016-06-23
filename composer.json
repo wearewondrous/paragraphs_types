@@ -18,6 +18,6 @@
     "drupal/entity_embed": "~1.0",
     "drupal/embed": "~1.0",
     "drupal/dropzonejs": "~1.0",
-    "drupal/ctools": "~3.0"
+    "drupal/ctools": "dev-3.0.x"
   }
 }
