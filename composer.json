@@ -22,6 +22,7 @@
     "drupal/inline_entity_form": "1.0.x-dev",
     "drupal/token": "1.0.x-dev",
     "drupal/file_entity": "~2.0",
-    "drupal/media_entity_image": "~1.0"
+    "drupal/media_entity_image": "dev-1.0.x",
+    "drupal/media_entity": "dev-1.0.x"
   }
 }
