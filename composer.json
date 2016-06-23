@@ -12,12 +12,14 @@
     }
   ],
   "require": {
-    "drupal/paragraphs": "1.0.x-dev",
+    "drupal/paragraphs": "~1.0",
     "drupal/file_browser": "1.0.x-dev",
     "drupal/entity_browser": "dev-1.0.x",
     "drupal/entity_embed": "1.0.x-dev",
     "drupal/embed": "1.0.x-dev",
     "drupal/dropzonejs": "1.0.x-dev",
-    "drupal/ctools": "3.0.x-dev"
+    "drupal/ctools": "3.0.x-dev",
+    "drupal/inline_entity_form": "1.0.x-dev",
+    "drupal/token": "1.0.x-dev"
   }
 }
