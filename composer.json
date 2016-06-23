@@ -14,7 +14,7 @@
   "require": {
     "drupal/paragraphs": "1.0.x-dev",
     "drupal/file_browser": "1.0.x-dev",
-    "drupal/entity_browser": "1.0.x-dev",
+    "drupal/entity_browser": "dev-1.0.x",
     "drupal/entity_embed": "1.0.x-dev",
     "drupal/embed": "1.0.x-dev",
     "drupal/dropzonejs": "1.0.x-dev",
