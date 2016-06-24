@@ -57,7 +57,7 @@ function paragraphs_types_theme() {
 function paragraphs_types_page_attachments(array &$page) {
   $config = \Drupal::config('paragraphs_types.settings');
 
-  if (!$config->get('do_not_load_gallery_assets')) {
+  if ($config->get('load_gallery_assets')) {
     $page['#attached']['library'][] = 'paragraphs_types/paragraphs_types.gallery';
   }
 }

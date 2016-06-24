@@ -65,10 +65,10 @@ class ParagraphsAdminSettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('paragraphs_types.settings');
 
-    $form['gallery_assets'] = array(
+    $form['load_gallery_assets'] = array(
       '#title' => t('Do not load gallery assets'),
       '#type' => 'checkbox',
-      '#default_value' => $config->get('gallery_assets'),
+      '#default_value' => $config->get('load_gallery_assets'),
     );
 
     return parent::buildForm($form, $form_state);
@@ -88,7 +88,8 @@ class ParagraphsAdminSettingsForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
 
     $values = $form_state->getValues();
-    $this->config('paragraphs_types.settings')
+    $this
+      ->config('paragraphs_types.settings')
       ->set('gallery_assets', $values['gallery_assets'])
       ->save();
   }
