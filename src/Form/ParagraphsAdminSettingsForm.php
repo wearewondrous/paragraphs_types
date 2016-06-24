@@ -90,7 +90,7 @@ class ParagraphsAdminSettingsForm extends ConfigFormBase {
     $values = $form_state->getValues();
     $this
       ->config('paragraphs_types.settings')
-      ->set('gallery_assets', $values['gallery_assets'])
+      ->set('load_gallery_assets', $values['load_gallery_assets'])
       ->save();
   }
 
