@@ -7,6 +7,9 @@
 
 ## Installation
 
+At the Moment only Drupal Composer projects are supported. Please see the documentation here:
+[Using Composer to install Drupal packages through Drupal.org](https://www.drupal.org/node/2718229)
+
 To install this module 4 libraries are needed.
 - dropzone
 - imagesloaded
