@@ -7,48 +7,6 @@
   ],
   "license": "MIT",
   "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "enyo/dropzone",
-        "version": "4.3.0",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/enyo/dropzone/archive/v4.3.0.zip",
-          "type": "zip"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "desandro/imagesloaded",
-        "version": "3.2.0",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
-          "type": "zip"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "desandro/masonry",
-        "version": "3.3.2",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
-          "type": "zip"
-        }
-      }
-    }
-  ],
   "require": {
     "drupal/paragraphs": "~1.0",
     "drupal/file_browser": "~1.0",
