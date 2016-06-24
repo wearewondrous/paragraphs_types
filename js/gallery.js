@@ -1,10 +1,10 @@
 jQuery(document).ready(function($) {
   'use strict';
 
-  var openWondrousPhotoSwipe = function(galleryIndex, imgIndex, animationOrigin) {
+  var openPhotoSwipe = function(galleryIndex, imgIndex, animationOrigin) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
     // define the gallery
-    var items = wondrousParagraphGalleries[galleryIndex];
+    var items = paragraphGalleries[galleryIndex];
     // define options (if needed)
     var options = {
       getThumbBoundsFn: function() {
@@ -34,13 +34,13 @@ jQuery(document).ready(function($) {
     });
     gallery.init();
   };
-  $('.open-wondrous-gallery').on('click', function(event) {
+  $('.open-gallery').on('click', function(event) {
     event.preventDefault();
     var imgIndex = 0;
     if ($(this).hasClass('img-thumbnail')) {
       imgIndex = $('.img-thumbnail').index($(this));
     }
     var galleryIndex = 0;
-    openWondrousPhotoSwipe(galleryIndex, imgIndex, null);
+    openPhotoSwipe(galleryIndex, imgIndex, null);
   });
 });
