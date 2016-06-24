@@ -151,7 +151,6 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
   }
 }
 
-
 function paragraphs_types_preprocess_paragraph__image(&$variables) {
   base_preprocess_paragraph($variables);
 
