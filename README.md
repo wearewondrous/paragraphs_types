@@ -1,9 +1,10 @@
 # Paragraphs types collection
 
-## Warnings
+## Basics
 
-- highly experimental, do not use in production
-- current does not work together with paragraphs demo because of naming collissions
+- Highly experimental, do not use in production
+- Only for Drupal 8, there will be no backport
+- Currently does not work together with paragraphs demo because of naming collissions
 
 ## Installation
 
@@ -68,7 +69,7 @@ Just add the following to your composer.json file:
 }
 ```
 
-then add this git repository:`
+then add this git repository:
 
 ```
 {
@@ -77,7 +78,7 @@ then add this git repository:`
 }
 ```
 
-be sure to have the installer path for libraries set
+Be sure to have the installer path for libraries set
 
 ```
 "web/libraries/{$name}": [
@@ -85,8 +86,8 @@ be sure to have the installer path for libraries set
 ]
 ```
 
-to install the libraries via composer then type
+To install the libraries via composer then type
 composer require enyo/dropzone desandro/imagesloaded desandro/masonry dimsemenov/photoswipe
 
-to install the module run
+To install the module run
 composer require drupal/paragraphs_types
