@@ -130,28 +130,24 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
 
 function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
   base_preprocess_paragraph($variables);
+  $paragraph = $variables['paragraph'];
+  $images = $paragraph->get('field_images');
 
   $variables['images'] = [];
-  foreach ($variables['paragraph']->field_images->referencedEntities() as $item) {
-    /* @var $item Drupal\file\Plugin\Field\FieldType\FileFieldItemList */
-    $imageField = $item->get('field_image')->first();
 
-    if (!$imageField) {
-      continue;
-    }
+  foreach ($images as $item) {
 
-    $file = File::load($imageField->target_id);
+    $file = File::load($item->target_id);
 
-    $caption = $item->get('field_caption')->value;
     $image = [
       'url' => file_create_url($file->getFileUri()),
-      'width' => $imageField->width,
-      'height' => $imageField->height,
-      'caption' => $caption,
+      'width' => $item->width,
+      'height' => $item->height,
       'sizes' => _load_image_sizes($file)
     ];
 
     $variables['images'][] = $image;
+
   }
 }
 
