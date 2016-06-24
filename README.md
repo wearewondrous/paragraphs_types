@@ -1,5 +1,12 @@
 # Paragraphs types collection
 
+## Warnings
+
+- highly experimental, do not use in production
+- current does not work together with paragraphs demo because of naming collissions
+
+## Installation
+
 To install this module 4 libraries are needed.
 - dropzone
 - imagesloaded
