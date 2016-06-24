@@ -58,12 +58,21 @@ Just add the following to your composer.json file:
 }
 ```
 
-then add this git repository:
+then add this git repository:`
+
 ```
 {
   "type": "vcs",
   "url": "https://github.com/WondrousLLC/paragraph_types"
 }
+```
+
+be sure to have the installer path for libraries set
+
+```
+"web/libraries/{$name}": [
+    "type:drupal-library"
+]
 ```
 
 then run composer require drupal/paragraphs_types
