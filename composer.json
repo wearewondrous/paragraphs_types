@@ -2,25 +2,68 @@
   "name": "drupal/paragraphs_types",
   "type": "drupal-module",
   "description": "paragraphs types",
-  "keywords": ["Drupal"],
+  "keywords": [
+    "Drupal"
+  ],
   "license": "MIT",
   "minimum-stability": "dev",
   "repositories": [
     {
       "type": "composer",
-      "url":  "https://packages.drupal.org/8"
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "enyo/dropzone",
+        "version": "4.3.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/enyo/dropzone/archive/v4.3.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "desandro/imagesloaded",
+        "version": "3.2.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "desandro/masonry",
+        "version": "3.3.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+          "type": "zip"
+        }
+      }
     }
   ],
   "require": {
     "drupal/paragraphs": "~1.0",
-    "drupal/file_browser": "1.0.x-dev",
-    "drupal/entity_browser": "dev-1.0.x",
-    "drupal/entity_embed": "1.0.x-dev",
-    "drupal/embed": "1.0.x-dev",
-    "drupal/dropzonejs": "1.0.x-dev",
+    "drupal/file_browser": "~1.0",
     "drupal/ctools": "3.0.x-dev",
-    "drupal/inline_entity_form": "1.0.x-dev",
-    "drupal/token": "1.0.x-dev",
-    "drupal/file_entity": "2.0.x-dev"
+    "drupal/file_entity": "2.0.x-dev",
+    "enyo/dropzone": "~4.3",
+    "desandro/imagesloaded": "~3.2",
+    "desandro/masonry": "~3.3",
+    "composer/installers": "~1.0"
+  },
+  "extras": {
+    "installer-paths": {
+      "web/libraries": [
+        "type:drupal-library"
+      ]
+    }
   }
 }
