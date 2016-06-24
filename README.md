@@ -1,9 +1,10 @@
 # Paragraphs types collection
 
-To install this module 3 libraries are needed.
+To install this module 4 libraries are needed.
 - dropzone
 - imagesloaded
 - masonry
+- photoswipe
 
 Just add the following to your composer.json file:
 
@@ -42,6 +43,18 @@ Just add the following to your composer.json file:
       "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
       "type": "zip"
     }
+},
+{
+  "type": "package",
+  "package": {
+    "name": "dimsemenov/PhotoSwipe",
+    "version": "4.1.1",
+    "type": "drupal-library",
+    "dist": {
+      "url": "https://github.com/dimsemenov/PhotoSwipe/archive/v4.1.1.zip",
+      "type": "zip"
+    }
+  }
 }
 ```
 

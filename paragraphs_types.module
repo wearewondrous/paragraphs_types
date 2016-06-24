@@ -59,6 +59,7 @@ function paragraphs_types_page_attachments(array &$page) {
 
   if ($config->get('load_gallery_assets')) {
     $page['#attached']['library'][] = 'paragraphs_types/gallery';
+    $page['#attached']['library'][] = 'paragraphs_types/photoswipe';
   }
 }
 

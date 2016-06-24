@@ -1,10 +1,19 @@
+photoswipe:
+  title: 'PhotoSwipe'
+  version: 4.1.1
+  website: http://photoswipe.com/
+  license:
+    name: MIT
+    url: https://github.com/dimsemenov/PhotoSwipe/blob/v4.1.1/LICENSE
+    gpl-compatible: true
+  css:
+    /libraries/photoswipe/dist/photoswipe.css: {}
+    /libraries/photoswipe/dist/default-skin/default-skin.css: {}
+  js:
+    /libraries/photoswipe/dist/photoswipe-ui-default.min.js: {}
+    /libraries/photoswipe/dist/photoswipe/photoswipe.min.js: {}
+
 gallery:
   version: 1.0
-  css:
-    theme:
-      css/vendor/photoswipe/photoswipe.css: {}
-      css/vendor/photoswipe/skin.css: {}
   js:
-    js/vendor/photoswipe/photoswipe.min.js: {}
-    js/vendor/photoswipe/photoswipe-ui-default.min.js: {}
     js/wondrous-gallery.js: {}
