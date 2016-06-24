@@ -11,7 +11,7 @@ photoswipe:
     /libraries/PhotoSwipe/dist/default-skin/default-skin.css: {}
   js:
     /libraries/PhotoSwipe/dist/photoswipe-ui-default.min.js: {}
-    /libraries/PhotoSwipe/dist/photoswipe/photoswipe.min.js: {}
+    /libraries/PhotoSwipe/dist/photoswipe.min.js: {}
 
 gallery:
   version: 1.0
