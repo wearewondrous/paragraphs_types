@@ -66,7 +66,7 @@ class ParagraphsAdminSettingsForm extends ConfigFormBase {
     $config = $this->config('paragraphs_types.settings');
 
     $form['load_gallery_assets'] = array(
-      '#title' => t('Do not load gallery assets'),
+      '#title' => t('Load gallery assets'),
       '#type' => 'checkbox',
       '#default_value' => $config->get('load_gallery_assets'),
     );
