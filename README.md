@@ -47,7 +47,7 @@ Just add the following to your composer.json file:
 {
   "type": "package",
   "package": {
-    "name": "dimsemenov/PhotoSwipe",
+    "name": "dimsemenov/photoswipe",
     "version": "4.1.1",
     "type": "drupal-library",
     "dist": {
@@ -75,4 +75,8 @@ be sure to have the installer path for libraries set
 ]
 ```
 
-then run composer require drupal/paragraphs_types
+to install the libraries via composer then type
+composer require enyo/dropzone desandro/imagesloaded desandro/masonry dimsemenov/photoswipe
+
+to install the module run
+composer require drupal/paragraphs_types

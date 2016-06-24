@@ -12,10 +12,6 @@
     "drupal/file_browser": "~1.0",
     "drupal/ctools": "3.0.x-dev",
     "drupal/file_entity": "2.0.x-dev",
-    "enyo/dropzone": "4.3.*",
-    "desandro/imagesloaded": "3.2.*",
-    "desandro/masonry": "3.3.*",
-    "dimsemenov/PhotoSwipe": "4.1.*",
     "composer/installers": "~1.0"
   }
 }
