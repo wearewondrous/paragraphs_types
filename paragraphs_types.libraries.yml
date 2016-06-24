@@ -16,4 +16,4 @@ photoswipe:
 gallery:
   version: 1.0
   js:
-    js/wondrous-gallery.js: {}
+    js/gallery.js: {}
