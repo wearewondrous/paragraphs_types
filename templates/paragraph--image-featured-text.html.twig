@@ -38,27 +38,20 @@
 
 {%
   set classes = [
-    'article-advanced-img-block',
-    layout == 'image-text' ? 'image-on-left',
-  ]
-%}
-
-{%
-  set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    image_text_layout|clean_class,
   ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
-  <div class="text-column rt-content">
+  <div class="text-column">
     {{ content.field_body }}
   </div>
-  <div class="image-column rt-content">
+  <div class="image-column">
     <figure>
       {{ content.field_image }}
-      {# todo: convert to template, check for empty state #}
       {{ content.field_figcaption }}
     </figure>
   </div>
