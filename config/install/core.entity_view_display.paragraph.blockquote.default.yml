@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blockquote.field_blockquote_author
+    - field.field.paragraph.blockquote.field_blockquote_footer
     - field.field.paragraph.blockquote.field_body
     - paragraphs.paragraphs_type.blockquote
 _core:
@@ -13,7 +13,7 @@ targetEntityType: paragraph
 bundle: blockquote
 mode: default
 content:
-  field_blockquote_author:
+  field_blockquote_footer:
     weight: 1
     label: hidden
     settings:

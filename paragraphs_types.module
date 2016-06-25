@@ -158,7 +158,7 @@ function _load_image_sizes($image) {
 function paragraphs_types_uninstall() {
   $files = [
     'paragraphs.paragraphs_type.text',
-    'paragraphs.paragraphs_type.quote',
+    'paragraphs.paragraphs_type.blockquote',
     'paragraphs.paragraphs_type.video',
     'paragraphs.paragraphs_type.image',
     'paragraphs.paragraphs_type.gallery',
@@ -172,7 +172,7 @@ function paragraphs_types_uninstall() {
     'field.field.paragraph.image.field_caption',
     'field.field.paragraph.gallery.field_images',
     'field.field.paragraph.gallery.field_gallery_headline',
-    'field.field.paragraph.quote.field_quote_author',
+    'field.field.paragraph.quote.field_blockquote_footer',
     'field.field.paragraph.text_with_image.field_caption',
     'field.field.paragraph.text_with_image.field_image',
     'field.field.paragraph.text_with_image.field_text',
@@ -191,7 +191,7 @@ function paragraphs_types_uninstall() {
 
     'core.entity_view_display.paragraph.gallery.default',
     'core.entity_view_display.paragraph.image.default',
-    'core.entity_view_display.paragraph.quote.default',
+    'core.entity_view_display.paragraph.blockquote.default',
     'core.entity_view_display.paragraph.text_with_image.default',
     'core.entity_view_display.paragraph.text.default',
     'core.entity_view_display.paragraph.video.default',

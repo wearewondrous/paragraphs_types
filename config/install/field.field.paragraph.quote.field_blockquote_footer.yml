@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_blockquote_author
+    - field.storage.paragraph.field_blockquote_footer
     - paragraphs.paragraphs_type.blockquote
 _core:
   default_config_hash: YIdhmYhpS7C477Ynls8tp2cIJYwHhfugDw5e-7s0vzw
-id: paragraph.blockquote.field_blockquote_author
-field_name: field_blockquote_author
+id: paragraph.blockquote.field_blockquote_footer
+field_name: field_blockquote_footer
 entity_type: paragraph
 bundle: blockquote
 label: Author
