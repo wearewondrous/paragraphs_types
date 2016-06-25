@@ -80,20 +80,6 @@ env:
     # etc. to only output those channels.
     #- DRUPAL_TI_DEBUG_FILE_OUTPUT="selenium xvfb webserver"
 
-    # Libraries
-    - DROPZONEJS_PATH="https://github.com/enyo/dropzone/archive/v4.3.0.zip"
-    - DROPZONE_FILE="v4.3.0.zip"
-    - MASONRY_PATH="https://github.com/desandro/masonry/archive/v3.3.2.zip"
-    - MASONRY_FILE="v3.3.2.zip"
-    - IMAGESLOADED_PATH="https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
-    - IMAGESLOADED_FILE="v3.2.0.zip"
-    - PHOTOSWIPE_PATH="https://github.com/dimsemenov/PhotoSwipe/archive/v4.1.1.zip"
-    - PHOTOSWIPE_FILE="v4.1.1.zip"
-    - DROPZONE_NAME="dropzone"
-    - MASONRY_NAME="masonry"
-    - IMAGESLOADED_NAME="imagesloaded"
-    - PHOTOSWIPE_NAME="PhotoSwipe"
-    - DRUPALDIR="/home/travis/build/WondrousLLC/drupal-8/drupal"
   matrix:
     # [[[ SELECT ANY OR MORE OPTIONS ]]]
     # - DRUPAL_TI_RUNNERS="phpunit"
@@ -116,17 +102,13 @@ before_install:
 
 install:
   - drupal-ti install
-  - mkdir -p $DRUPALDIR/libraries
-  - wget $DROPZONEJS_PATH && unzip $DROPZONE_FILE -d $DRUPALDIR/libraries/$DROPZONE_NAME
-  - wget $MASONRY_PATH && unzip $MASONRY_FILE -d $DRUPALDIR/libraries/$MASONRY_NAME
-  - wget $IMAGESLOADED_PATH && unzip $IMAGESLOADED_FILE -d $DRUPALDIR/libraries/$IMAGESLOADED_NAME
-  - wget $PHOTOSWIPE_PATH && unzip $PHOTOSWIPE_FILE -d $DRUPALDIR/libraries/$PHOTOSWIPE_NAME
 
 before_script:
+  - drupal-ti --include drupal_ti/.travis-before_script.sh
   - drupal-ti before_script
 
 script:
-  - drupal-ti script
+  - export SIMPLETEST_DB=mysql://root:@127.0.0.1/drupal_travis_db; drupal-ti script
 
 after_script:
   - drupal-ti after_script
