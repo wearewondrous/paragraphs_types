@@ -81,10 +81,10 @@ env:
     #- DRUPAL_TI_DEBUG_FILE_OUTPUT="selenium xvfb webserver"
 
     # Libraries
-    - DROPZONEJS_PATH="https://github.com/enyo/dropzone/archive/"
-    - MASONRY_PATH="https://github.com/desandro/masonry/archive/"
-    - IMAGESLOADED_PATH="https://github.com/desandro/imagesloaded/archive/"
-    - PHOTOSWIPE_PATH="https://github.com/dimsemenov/PhotoSwipe/archive/"
+    - DROPZONEJS_PATH="https://github.com/enyo/dropzone/archive"
+    - MASONRY_PATH="https://github.com/desandro/masonry/archive"
+    - IMAGESLOADED_PATH="https://github.com/desandro/imagesloaded/archive"
+    - PHOTOSWIPE_PATH="https://github.com/dimsemenov/PhotoSwipe/archive"
     - DROPZONE_NAME="dropzone"
     - MASONRY_NAME="masonry"
     - IMAGESLOADED_NAME="imagesloaded"
@@ -118,10 +118,10 @@ install:
 
   # Install the required libraries
   - sudo apt-get install unzip
-  - wget $DROPZONEJS_PATH$DROPZONE_FILE && unzip $DROPZONE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$DROPZONE_NAME
-  - wget $MASONRYJS_PATH$MASONRY_FILE && unzip $MASONRY_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$MASONRY_NAME
-  - wget $IMAGESLOADEDJS_PATH$IMAGESLOADED_FILE && unzip $IMAGESLOADED_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$IMAGESLOADED_NAME
-  - wget $PHOTOSWIPEJS_PATH$PHOTOSWIPE_FILE && unzip $PHOTOSWIPE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$PHOTOSWIPE_NAME
+  - wget $DROPZONEJS_PATH/$DROPZONE_FILE && unzip $DROPZONE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$DROPZONE_NAME
+  - wget $MASONRYJS_PATH/$MASONRY_FILE && unzip $MASONRY_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$MASONRY_NAME
+  - wget $IMAGESLOADEDJS_PATH/$IMAGESLOADED_FILE && unzip $IMAGESLOADED_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$IMAGESLOADED_NAME
+  - wget $PHOTOSWIPEJS_PATH/$PHOTOSWIPE_FILE && unzip $PHOTOSWIPE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$PHOTOSWIPE_NAME
 
 before_script:
   - drupal-ti before_script
