@@ -126,7 +126,7 @@ before_script:
   - drupal-ti before_script
 
 script:
-  - cd ./tests
+  - cd tests
   - drupal-ti script
 
 after_script:
