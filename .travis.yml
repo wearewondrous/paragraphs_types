@@ -116,6 +116,11 @@ before_install:
 
 install:
   - drupal-ti install
+  - mkdir -p $DRUPALDIR/libraries
+  - wget $DROPZONEJS_PATH && unzip $DROPZONE_FILE -d $DRUPALDIR/libraries/$DROPZONE_NAME
+  - wget $MASONRY_PATH && unzip $MASONRY_FILE -d $DRUPALDIR/libraries/$MASONRY_NAME
+  - wget $IMAGESLOADED_PATH && unzip $IMAGESLOADED_FILE -d $DRUPALDIR/libraries/$IMAGESLOADED_NAME
+  - wget $PHOTOSWIPE_PATH && unzip $PHOTOSWIPE_FILE -d $DRUPALDIR/libraries/$PHOTOSWIPE_NAME
 
 before_script:
   - drupal-ti before_script
