@@ -96,12 +96,12 @@ env:
     - DRUPALDIR="/home/travis/build/WondrousLLC/drupal-8/drupal"
   matrix:
     # [[[ SELECT ANY OR MORE OPTIONS ]]]
-    # - DRUPAL_TI_RUNNERS="phpunit"
+    - DRUPAL_TI_RUNNERS="phpunit"
     #- DRUPAL_TI_RUNNERS="simpletest"
     #- DRUPAL_TI_RUNNERS="behat"
     #- DRUPAL_TI_RUNNERS="phpunit simpletest behat"
     # Use phpunit-core to test modules with phpunit with Drupal 8 core.
-    - DRUPAL_TI_RUNNERS="phpunit-core"
+    # - DRUPAL_TI_RUNNERS="phpunit-core"
 
 mysql:
   database: drupal_travis_db
@@ -123,18 +123,6 @@ install:
   - wget $PHOTOSWIPE_PATH && unzip $PHOTOSWIPE_FILE -d $DRUPALDIR/libraries/$PHOTOSWIPE_NAME
 
 before_script:
-  - pwd
-  - cd $DRUPAL_TI_DRUPAL_DIR
-  - pwd
-  - ls -lah
-  - cd build
-  - ls -lah
-  - cd WondrousLLC
-  - ls -lah
-  - cd drupal-8
-  - ls -lah
-  - cd drupal
-  - ls -lah
   - drupal-ti before_script
 
 
