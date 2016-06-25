@@ -103,16 +103,12 @@ install:
   - drupal-ti install
 
 before_script:
-  - "export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH"
-  - "if [ $(phantomjs --version) != '2.1.1' ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi"
-  - "if [ $(phantomjs --version) != '2.1.1' ]; then wget https://assets.membergetmember.co/software/phantomjs-2.1.1-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2; fi"
-  - "if [ $(phantomjs --version) != '2.1.1' ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi"
-  - "phantomjs --version"
   - drupal-ti --include drupal_ti/.travis-before_script.sh
   - drupal-ti before_script
 
 script:
-  - export SIMPLETEST_DB=mysql://root:@127.0.0.1/drupal_travis_db; drupal-ti script
+  - phantomjs --ssl-protocol=any --ignore-ssl-errors=true /home/travis/build/WondrousLLC/drupal-8/drupal/vendor/jcalderonzumba/gastonjs/src/Client/main.js 8510 1024 768 &
+  - export SIMPLETEST_DB=mysql://root:@127.0.0.1/drupal_travis_db; export SIMPLETEST_BASE_URL="http://127.0.0.1:8080"; drupal-ti script
 
 after_script:
   - drupal-ti after_script
