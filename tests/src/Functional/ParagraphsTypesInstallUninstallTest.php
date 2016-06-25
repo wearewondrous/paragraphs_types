@@ -2,9 +2,9 @@
 
 namespace Drupal\Tests\paragraphs_types\Functional;
 
-use Drupal\FunctionalJavascriptTests\JavascriptTestBase;
+use Drupal\Tests\BrowserTestBase;
 
-class ParagraphsTypesInstallUninstallTest extends JavascriptTestBase {
+class ParagraphsTypesInstallUninstallTest extends BrowserTestBase {
 
   public static $modules = array('paragraphs_types');
 
@@ -32,11 +32,4 @@ class ParagraphsTypesInstallUninstallTest extends JavascriptTestBase {
     $this->assertNotContains('Paragraphs Types', $html);
   }
 
-  /**
-   * Waits for jQuery to become active and animations to complete.
-   */
-  protected function waitForAjaxToFinish() {
-    $condition = "(0 === jQuery.active && 0 === jQuery(':animated').length)";
-    $this->assertJsCondition($condition, 10000);
-  }
 }
