@@ -33,22 +33,34 @@ function paragraphs_types_help($route_name, RouteMatchInterface $route_match) {
 function paragraphs_types_theme() {
   return array(
     'paragraph__text' => array(
-      'render element' => 'elements',
+      'render element' => 'element',
+      'template' => 'paragraph--text',
+      'base hook' => 'paragraph',
     ),
     'paragraph__text_with_image' => array(
-      'render element' => 'elements',
+      'render element' => 'element',
+      'template' => 'paragraph--text',
+      'base hook' => 'paragraph',
     ),
     'paragraph__video' => array(
-      'render element' => 'elements',
+      'render element' => 'element',
+      'template' => 'paragraph--text',
+      'base hook' => 'paragraph',
     ),
     'paragraph__gallery' => array(
-      'render element' => 'elements',
+      'render element' => 'element',
+      'template' => 'paragraph--text',
+      'base hook' => 'paragraph',
     ),
     'paragraph__image' => array(
-      'render element' => 'elements',
+      'render element' => 'element',
+      'template' => 'paragraph--text',
+      'base hook' => 'paragraph',
     ),
     'paragraph__quote' => array(
-      'render element' => 'elements',
+      'render element' => 'element',
+      'template' => 'paragraph--text',
+      'base hook' => 'paragraph',
     )
   );
 }
@@ -64,46 +76,8 @@ function paragraphs_types_page_attachments(array &$page) {
 }
 
 
-/**
- * Implements hook_preprocess_HOOK() for field.html.twig.
- */
-function base_preprocess_paragraph(&$variables) {
-  $variables['view_mode'] = $variables['elements']['#view_mode'];
-  $variables['paragraph'] = $variables['elements']['#paragraph'];
-
-  // Helpful $content variable for templates.
-  $variables += array('content' => array());
-  foreach (Element::children($variables['elements']) as $key) {
-    $variables['content'][$key] = $variables['elements'][$key];
-  }
-}
-
-function paragraphs_types_preprocess_paragraph__text(&$variables) {
-  base_preprocess_paragraph($variables);
-}
-
-function paragraphs_types_preprocess_paragraph__quote(&$variables) {
-  base_preprocess_paragraph($variables);
-}
-
-function paragraphs_types_preprocess_paragraph__text_with_image(&$variables) {
-  base_preprocess_paragraph($variables);
-
-  if (array_key_exists(0,
-    $variables['elements']['field_text_with_image_layout'])) {
-    $variables['layout'] = $variables['paragraph']->get('field_text_with_image_layout')->value;
-    if ($variables['paragraph']->get('field_image')->first()) {
-      $variables['image_is_landscape'] = $variables['paragraph']->get('field_image')
-          ->first()->width > $variables['paragraph']->get('field_image')
-          ->first()->height;
-    }
-  }
-}
-
 
 function paragraphs_types_preprocess_paragraph__video(&$variables) {
-  base_preprocess_paragraph($variables);
-
   $videoUrl = $variables['elements']['field_url'][0]['#url']->getUri();
   $parsedUrl = parse_url($videoUrl);
   $videoHost = NULL;
@@ -129,7 +103,6 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
 }
 
 function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
-  base_preprocess_paragraph($variables);
   $paragraph = $variables['paragraph'];
   $images = $paragraph->get('field_images');
 
@@ -152,8 +125,6 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
 }
 
 function paragraphs_types_preprocess_paragraph__image(&$variables) {
-  base_preprocess_paragraph($variables);
-
   $imageField = $variables['paragraph']->get('field_image')->first();
   $file = File::load($imageField->target_id);
 
