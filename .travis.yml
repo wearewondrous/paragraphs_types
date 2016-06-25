@@ -131,6 +131,8 @@ before_script:
   - ls -lah
   - cd WondrousLLC
   - ls -lah
+  - cd drupal-8
+  - ls -lah
   - drupal-ti before_script
 
 
