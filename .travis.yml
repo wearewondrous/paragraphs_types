@@ -8,7 +8,7 @@
 
 language: php
 
-sudo: false
+sudo: true
 
 php:
   - 7
@@ -117,7 +117,7 @@ install:
   - drupal-ti install
 
   # Install the required libraries
-  - apt-get install unzip
+  - sudo apt-get install unzip
   - wget $DROPZONEJS_PATH$DROPZONE_FILE && unzip $DROPZONE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$DROPZONE_NAME
   - wget $MASONRYJS_PATH$MASONRY_FILE && unzip $MASONRY_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$MASONRY_NAME
   - wget $IMAGESLOADEDJS_PATH$IMAGESLOADED_FILE && unzip $IMAGESLOADED_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$IMAGESLOADED_NAME
