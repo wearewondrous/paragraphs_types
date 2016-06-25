@@ -11,3 +11,5 @@ dependencies:
   - dropzonejs
   - ctools
   - ckeditor
+  - options
+  - text
