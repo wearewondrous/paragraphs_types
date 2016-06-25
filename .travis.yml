@@ -109,13 +109,11 @@ mysql:
   encoding: utf8
 
 before_install:
-  - phpenv config-rm xdebug.ini
   - composer self-update
   - composer global require "lionsad/drupal_ti:1.*"
   - drupal-ti before_install
 
 install:
-  - phpenv config-rm xdebug.ini
   - drupal-ti install
   - mkdir -p $DRUPALDIR/libraries
   - wget $DROPZONEJS_PATH && unzip $DROPZONE_FILE -d $DRUPALDIR/libraries/$DROPZONE_NAME
@@ -124,11 +122,9 @@ install:
   - wget $PHOTOSWIPE_PATH && unzip $PHOTOSWIPE_FILE -d $DRUPALDIR/libraries/$PHOTOSWIPE_NAME
 
 before_script:
-  - phpenv config-rm xdebug.ini
   - drupal-ti before_script
 
 script:
-  - phpenv config-rm xdebug.ini
   - cd tests
   - drupal-ti script
 
