@@ -22,14 +22,6 @@ class ParagraphsTypesInstallUninstallTest extends JavascriptTestBase {
 
     $session = $this->getSession();
 
-    // Delete Paragraphs data.
-    $this->drupalGet('admin/structure/paragraphs_type/uninstall');
-    $this->assertSession()->pageTextContains(t('Prepare'));
-    $this->submitForm([], t('Delete Paragraphs data'));
-    $this->waitForAjaxToFinish();
-    $html = $session->getPage()->getHtml();
-    $this->assertContains('Paragraphs data has been deleted.', $html);
-
     // Uninstall the module.
     $this->drupalGet('admin/modules/uninstall');
     $this->submitForm(['uninstall[paragraphs_types]' => TRUE], t('Uninstall'));
