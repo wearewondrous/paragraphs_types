@@ -123,6 +123,7 @@ install:
   - wget $PHOTOSWIPE_PATH && unzip $PHOTOSWIPE_FILE -d $DRUPALDIR/libraries/$PHOTOSWIPE_NAME
 
 before_script:
+  - cd $DRUPALDIR
   - drupal-ti before_script
 
 script:
