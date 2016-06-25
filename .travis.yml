@@ -127,6 +127,8 @@ before_script:
   - cd $DRUPAL_TI_DRUPAL_DIR
   - pwd
   - ls -lah
+  - cd build
+  - ls -lah
   - cd $DRUPAL_TI_DRUPAL_DIR && drupal-ti before_script
 
 
