@@ -112,7 +112,6 @@ before_script:
   - drupal-ti before_script
 
 script:
-  - phantomjs --ssl-protocol=any --ignore-ssl-errors=true /home/travis/build/WondrousLLC/drupal-8/drupal/vendor/jcalderonzumba/gastonjs/src/Client/main.js 8510 1024 768 &
   - export SIMPLETEST_DB=mysql://root:@127.0.0.1/drupal_travis_db; drupal-ti script
 
 after_script:
