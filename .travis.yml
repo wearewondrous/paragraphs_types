@@ -129,7 +129,9 @@ before_script:
   - ls -lah
   - cd build
   - ls -lah
-  - cd $DRUPAL_TI_DRUPAL_DIR && drupal-ti before_script
+  - cd WondrousLLC
+  - ls -lah
+  - drupal-ti before_script
 
 
 script:
