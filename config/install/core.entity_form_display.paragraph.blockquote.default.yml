@@ -3,17 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.quote.field_quote_author
-    - field.field.paragraph.quote.field_text_plain
-    - paragraphs.paragraphs_type.quote
+    - field.field.paragraph.blockquote.field_blockquote_author
+    - field.field.paragraph.blockquote.field_text_plain
+    - paragraphs.paragraphs_type.blockquote
 _core:
   default_config_hash: XIH2bt-a6tObyYT69fhUPpwBW1KIKF9LmeR9JVCpYCE
-id: paragraph.quote.default
+id: paragraph.blockquote.default
 targetEntityType: paragraph
-bundle: quote
+bundle: blockquote
 mode: default
 content:
-  field_quote_author:
+  field_blockquote_author:
     weight: 1
     settings:
       size: 60

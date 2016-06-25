@@ -6,8 +6,8 @@ dependencies:
     - paragraphs
 _core:
   default_config_hash: K5vOEnqK3OuezucSjvojqfhyyCPOmVAReUDfKYXKfx4
-id: paragraph.field_quote_author
-field_name: field_quote_author
+id: paragraph.field_blockquote_author
+field_name: field_blockquote_author
 entity_type: paragraph
 type: string
 settings:

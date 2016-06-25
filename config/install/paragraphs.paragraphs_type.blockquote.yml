@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: UWNZR5Ng-AH09dPf-Etcn6nPwzrKtN4Di3b0VrAnHNo
-id: quote
-label: Quote
+id: blockquote
+label: Blockquote

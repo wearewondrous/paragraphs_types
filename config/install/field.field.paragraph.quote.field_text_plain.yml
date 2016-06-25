@@ -4,14 +4,14 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_text_plain
-    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.blockquote
 _core:
   default_config_hash: O5paEMyjwv6B_Vfz6sz0ggF6YpX6P2t1cgVlGhKij1I
-id: paragraph.quote.field_text_plain
+id: paragraph.blockquote.field_text_plain
 field_name: field_text_plain
 entity_type: paragraph
-bundle: quote
-label: Quote
+bundle: blockquote
+label: Blockquote
 description: ''
 required: true
 translatable: false
