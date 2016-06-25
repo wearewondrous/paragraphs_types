@@ -82,9 +82,13 @@ env:
 
     # Libraries
     - DROPZONEJS_PATH="https://github.com/enyo/dropzone/archive/v4.3.0.zip"
+    - DROPZONE_FILE="v4.3.0.zip"
     - MASONRY_PATH="https://github.com/desandro/masonry/archive/v3.3.2.zip"
+    - MASONRY_FILE="v3.3.2.zip"
     - IMAGESLOADED_PATH="https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
+    - IMAGESLOADED_FILE="v3.2.0.zip"
     - PHOTOSWIPE_PATH="https://github.com/dimsemenov/PhotoSwipe/archive/v4.1.1.zip"
+    - PHOTOSWIPE_FILE="v4.1.1.zip"
     - DROPZONE_NAME="dropzone"
     - MASONRY_NAME="masonry"
     - IMAGESLOADED_NAME="imagesloaded"
