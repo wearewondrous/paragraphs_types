@@ -5,6 +5,11 @@
   "keywords": [
     "Drupal"
   ],
+  "config": {
+    "github-oauth": {
+      "github.com": "18bb05283977e6b63b3951b3920e55e3a36292db"
+    }
+  },
   "license": "MIT",
   "minimum-stability": "dev",
   "require": {
