@@ -75,7 +75,9 @@ function paragraphs_types_page_attachments(array &$page) {
   }
 }
 
-
+function paragraphs_types_preprocess_paragraph__image_featured_text(&$variables) {
+  $variables['image_text_layout'] = $variables['paragraph']->get('field_image_text_layout')->value;
+}
 
 function paragraphs_types_preprocess_paragraph__video(&$variables) {
   $videoUrl = $variables['elements']['field_url'][0]['#url']->getUri();
