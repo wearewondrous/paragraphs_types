@@ -10,3 +10,4 @@ dependencies:
   - file_browser
   - dropzonejs
   - ctools
+  - ckeditor
