@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blockquote.field_blockquote_author
-    - field.field.paragraph.blockquote.field_text_plain
+    - field.field.paragraph.blockquote.field_body
     - paragraphs.paragraphs_type.blockquote
 _core:
   default_config_hash: XIH2bt-a6tObyYT69fhUPpwBW1KIKF9LmeR9JVCpYCE
@@ -20,7 +20,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_text_plain:
+  field_body:
     weight: 0
     settings:
       rows: 5

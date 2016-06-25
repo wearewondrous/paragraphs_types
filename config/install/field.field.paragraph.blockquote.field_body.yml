@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_plain
+    - field.storage.paragraph.field_body
     - paragraphs.paragraphs_type.blockquote
 _core:
   default_config_hash: O5paEMyjwv6B_Vfz6sz0ggF6YpX6P2t1cgVlGhKij1I
-id: paragraph.blockquote.field_text_plain
-field_name: field_text_plain
+id: paragraph.blockquote.field_body
+field_name: field_body
 entity_type: paragraph
 bundle: blockquote
 label: Blockquote

@@ -165,7 +165,7 @@ function paragraphs_types_uninstall() {
     'paragraphs.paragraphs_type.text_with_image',
 
     'field.field.paragraph.text.field_text',
-    'field.field.paragraph.quote.field_text_plain',
+    'field.field.paragraph.quote.field_body',
     'field.field.paragraph.video.field_url',
     'field.field.paragraph.quote.field_name',
     'field.field.paragraph.image.field_image',
@@ -183,7 +183,7 @@ function paragraphs_types_uninstall() {
     'field.storage.paragraph.field_caption',
     'field.storage.paragraph.field_image',
     'field.storage.paragraph.field_name',
-    'field.storage.paragraph.field_text_plain',
+    'field.storage.paragraph.field_body',
     'field.storage.paragraph.field_text',
     'field.storage.paragraph.field_url',
     'field.storage.paragraph.field_text_with_image_layout',
