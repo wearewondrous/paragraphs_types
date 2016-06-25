@@ -93,6 +93,7 @@ env:
     - MASONRY_NAME="masonry"
     - IMAGESLOADED_NAME="imagesloaded"
     - PHOTOSWIPE_NAME="PhotoSwipe"
+    - DRUPALDIR="/home/travis/build/WondrousLLC/drupal-8/drupal"
   matrix:
     # [[[ SELECT ANY OR MORE OPTIONS ]]]
     # - DRUPAL_TI_RUNNERS="phpunit"
@@ -118,10 +119,10 @@ install:
   - sudo apt-get install unzip
 before_script:
   - drupal-ti before_script
-  - wget $DROPZONEJS_PATH && sudo unzip $DROPZONE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$DROPZONE_NAME
-  - wget $MASONRYJS_PATH && sudo unzip $MASONRY_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$MASONRY_NAME
-  - wget $IMAGESLOADEDJS_PATH && sudo unzip $IMAGESLOADED_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$IMAGESLOADED_NAME
-  - wget $PHOTOSWIPEJS_PATH && sudo unzip $PHOTOSWIPE_FILE -d $DRUPAL_TI_DRUPAL_DIR/libraries/$PHOTOSWIPE_NAME
+  - wget $DROPZONEJS_PATH && sudo unzip $DROPZONE_FILE -d $DRUPAL_DIR/libraries/$DROPZONE_NAME
+  - wget $MASONRYJS_PATH && sudo unzip $MASONRY_FILE -d $DRUPAL_DIR/libraries/$MASONRY_NAME
+  - wget $IMAGESLOADEDJS_PATH && sudo unzip $IMAGESLOADED_FILE -d $DRUPAL_DIR/libraries/$IMAGESLOADED_NAME
+  - wget $PHOTOSWIPEJS_PATH && sudo unzip $PHOTOSWIPE_FILE -d $DRUPAL_DIR/libraries/$PHOTOSWIPE_NAME
 
 
 script:
