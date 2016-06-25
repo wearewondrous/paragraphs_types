@@ -1,5 +1,7 @@
 # Paragraphs types collection
 
+![Build status](https://travis-ci.org/WondrousLLC/paragraphs_types.svg?branch=master)
+
 ## Basics
 
 - Highly experimental, do not use in production
