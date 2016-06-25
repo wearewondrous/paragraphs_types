@@ -124,6 +124,9 @@ install:
 
 before_script:
   - pwd
+  - cd $DRUPAL_TI_DRUPAL_DIR
+  - pwd
+  - ls -lah
   - cd $DRUPAL_TI_DRUPAL_DIR && drupal-ti before_script
 
 
