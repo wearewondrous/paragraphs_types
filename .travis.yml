@@ -106,7 +106,6 @@ install:
   - drupal-ti install
 
 before_script:
-  - phantomjs --ssl-protocol=any --ignore-ssl-errors=true $DRUPAL_TI_DRUPAL_DIR/../vendor/jcalderonzumba/gastonjs/src/Client/main.js 8510 1024 768
   - drupal-ti before_script
 
 script:
