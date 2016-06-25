@@ -119,7 +119,7 @@ install:
   - sudo apt-get install unzip
   - mkdir -p $DRUPALDIR/libraries
   - wget $DROPZONEJS_PATH && sudo unzip $DROPZONE_FILE -d $DRUPALDIR/libraries/$DROPZONE_NAME
-  - wget $MASONRYJS_PATH && sudo unzip $MASONRY_FILE -d $DRUPALDIR/libraries/$MASONRY_NAME
+  - wget MASONRY_PATH && sudo unzip $MASONRY_FILE -d $DRUPALDIR/libraries/$MASONRY_NAME
   - wget $IMAGESLOADEDJS_PATH && sudo unzip $IMAGESLOADED_FILE -d $DRUPALDIR/libraries/$IMAGESLOADED_NAME
   - wget $PHOTOSWIPEJS_PATH && sudo unzip $PHOTOSWIPE_FILE -d $DRUPALDIR/libraries/$PHOTOSWIPE_NAME
 
