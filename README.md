@@ -2,6 +2,29 @@
 
 ![Build status](https://travis-ci.org/WondrousLLC/paragraphs_types.svg?branch=master)
 
+## What is it?
+
+This is a collection of paragraphs types for Drupal 8. This module requires the
+[Paragraphs Module](www.drupal.org/project/paragraphs) to be installed.
+
+## What is in it?
+
+- Gallery	gallery
+- Image	image
+  - field_image
+  - field_figcaption
+- Blockquote blockquote
+  - field_body
+  - field_blockquote_cite (see [MDN Source](https://developer.mozilla.org/de/docs/Web/HTML/Element/blockquote))
+  - field_blockquote_footer
+- Text	text
+  - field_body
+- Image featured Text
+  - field_body
+  - field_image
+  - field_image_text_layout
+- Video	video
+
 ## Basics
 
 - Highly experimental, do not use in production

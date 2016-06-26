@@ -21,7 +21,8 @@ function paragraphs_types_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.paragraphs_types':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Paragraphs Types') . '</p>';
+      $output .= '<p>' . t('This is a collection of paragraphs types for Drupal 8.') . '</p>';
+      $output .= '<p>' . t('Go to <a href="/admin/structure/paragraphs_type"><code>admin/structure/paragraphs_type</code></a> to see all paragraphs.') . '</p>';
       return $output;
 
     default:
