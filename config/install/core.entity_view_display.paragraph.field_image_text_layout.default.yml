@@ -3,24 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text_with_image.field_caption
-    - field.field.paragraph.text_with_image.field_image
-    - field.field.paragraph.text_with_image.field_text
-    - field.field.paragraph.text_with_image.field_text_with_image_layout
+    - field.field.paragraph.image_featured_text.field_figcaption
+    - field.field.paragraph.image_featured_text.field_image
+    - field.field.paragraph.image_featured_text.field_text
+    - field.field.paragraph.image_featured_text.field_image_text_layout
     - image.style.medium
-    - paragraphs.paragraphs_type.text_with_image
+    - paragraphs.paragraphs_type.image_featured_text
   module:
     - image
     - options
     - text
 _core:
   default_config_hash: w-zhM0Cuvknu4xEAYVHQuDOUuMm4f4Qvi_Rb8Okmmfo
-id: paragraph.text_with_image.default
+id: paragraph.image_featured_text.default
 targetEntityType: paragraph
-bundle: text_with_image
+bundle: image_featured_text
 mode: default
 content:
-  field_caption:
+  field_figcaption:
     weight: 2
     label: hidden
     settings:
@@ -41,7 +41,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_text_with_image_layout:
+  field_image_text_layout:
     type: list_default
     weight: 3
     label: hidden

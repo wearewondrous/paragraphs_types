@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: lmSnsR-RXSXgaYQk4HicWbxcwPgXprmb0KkyD2tnVu4
-id: text_with_image
+id: image_featured_text
 label: 'Text with image'

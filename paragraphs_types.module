@@ -40,7 +40,7 @@ function paragraphs_types_theme() {
       'template' => 'paragraph--text',
       'base hook' => 'paragraph',
     ),
-    'paragraph__text_with_image' => array(
+    'paragraph__image_featured_text' => array(
       'render element' => 'element',
       'template' => 'paragraph--text',
       'base hook' => 'paragraph',
@@ -161,7 +161,7 @@ function paragraphs_types_preprocess_paragraph__image(&$variables) {
     return FALSE;
   }
 
-  $caption = $paragraph->get('field_caption')->value;
+  $caption = $paragraph->get('field_figcaption')->value;
   $variables['image'] = [
     'url' => file_create_url($file->getFileUri()),
     'width' => $imageField->width,
@@ -194,44 +194,44 @@ function paragraphs_types_uninstall() {
     'paragraphs.paragraphs_type.video',
     'paragraphs.paragraphs_type.image',
     'paragraphs.paragraphs_type.gallery',
-    'paragraphs.paragraphs_type.text_with_image',
+    'paragraphs.paragraphs_type.image_featured_text',
 
     'field.field.paragraph.text.field_text',
     'field.field.paragraph.quote.field_body',
     'field.field.paragraph.video.field_url',
     'field.field.paragraph.quote.field_name',
     'field.field.paragraph.image.field_image',
-    'field.field.paragraph.image.field_caption',
+    'field.field.paragraph.image.field_figcaption',
     'field.field.paragraph.gallery.field_images',
     'field.field.paragraph.gallery.field_gallery_headline',
     'field.field.paragraph.quote.field_blockquote_footer',
-    'field.field.paragraph.text_with_image.field_caption',
-    'field.field.paragraph.text_with_image.field_image',
-    'field.field.paragraph.text_with_image.field_text',
-    'field.field.paragraph.text_with_image.field_text_with_image_layout',
+    'field.field.paragraph.image_featured_text.field_figcaption',
+    'field.field.paragraph.image_featured_text.field_image',
+    'field.field.paragraph.image_featured_text.field_text',
+    'field.field.paragraph.image_featured_text.field_image_text_layout',
 
     'field.storage.paragraph.field_quote_author',
     'field.storage.paragraph.field_images',
-    'field.storage.paragraph.field_caption',
+    'field.storage.paragraph.field_figcaption',
     'field.storage.paragraph.field_image',
     'field.storage.paragraph.field_name',
     'field.storage.paragraph.field_body',
     'field.storage.paragraph.field_text',
     'field.storage.paragraph.field_url',
-    'field.storage.paragraph.field_text_with_image_layout',
+    'field.storage.paragraph.field_image_text_layout',
     'field.storage.paragraph.field_gallery_headline',
 
     'core.entity_view_display.paragraph.gallery.default',
     'core.entity_view_display.paragraph.image.default',
     'core.entity_view_display.paragraph.blockquote.default',
-    'core.entity_view_display.paragraph.text_with_image.default',
+    'core.entity_view_display.paragraph.image_featured_text.default',
     'core.entity_view_display.paragraph.text.default',
     'core.entity_view_display.paragraph.video.default',
 
     'core.entity_form_display.paragraph.gallery.default',
     'core.entity_form_display.paragraph.image.default',
     'core.entity_form_display.paragraph.quote.default',
-    'core.entity_form_display.paragraph.text_with_image.default',
+    'core.entity_form_display.paragraph.image_featured_text.default',
     'core.entity_form_display.paragraph.text.default',
     'core.entity_form_display.paragraph.video.default',
   ];

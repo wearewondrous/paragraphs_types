@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_with_image_layout
-    - paragraphs.paragraphs_type.text_with_image
+    - field.storage.paragraph.field_image_text_layout
+    - paragraphs.paragraphs_type.image_featured_text
   module:
     - options
 _core:
   default_config_hash: FFgUPRTyBLzjQWNVIW5s2qk6SgTxL-D0BbM-DSPYOUw
-id: paragraph.text_with_image.field_text_with_image_layout
-field_name: field_text_with_image_layout
+id: paragraph.image_featured_text.field_image_text_layout
+field_name: field_image_text_layout
 entity_type: paragraph
-bundle: text_with_image
+bundle: image_featured_text
 label: Layout
 description: ''
 required: true

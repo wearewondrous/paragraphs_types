@@ -6,8 +6,8 @@ dependencies:
     - paragraphs
 _core:
   default_config_hash: dsyMxmNn6Quvw9B1Vc1VhSUNsPgBk9aK6ClMMomO7ko
-id: paragraph.field_caption
-field_name: field_caption
+id: paragraph.field_figcaption
+field_name: field_figcaption
 entity_type: paragraph
 type: string
 settings:

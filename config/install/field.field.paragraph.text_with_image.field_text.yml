@@ -4,15 +4,15 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_text
-    - paragraphs.paragraphs_type.text_with_image
+    - paragraphs.paragraphs_type.image_featured_text
   module:
     - text
 _core:
   default_config_hash: 5h64sJJBEPviRUpt_sd-9ivKRnkgjaXlENoGiDsAyeI
-id: paragraph.text_with_image.field_text
+id: paragraph.image_featured_text.field_text
 field_name: field_text
 entity_type: paragraph
-bundle: text_with_image
+bundle: image_featured_text
 label: Text
 description: ''
 required: false

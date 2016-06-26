@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_figcaption
     - field.field.paragraph.image.field_image
     - image.style.large
     - paragraphs.paragraphs_type.image
@@ -16,7 +16,7 @@ targetEntityType: paragraph
 bundle: image
 mode: default
 content:
-  field_caption:
+  field_figcaption:
     weight: 1
     label: hidden
     settings:

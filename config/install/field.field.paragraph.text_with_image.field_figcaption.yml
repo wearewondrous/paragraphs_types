@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_caption
-    - paragraphs.paragraphs_type.text_with_image
+    - field.storage.paragraph.field_figcaption
+    - paragraphs.paragraphs_type.image_featured_text
 _core:
   default_config_hash: '-l2pqzCn9n3aTanEic_PZmSKSBWEqjou715d03FEYbE'
-id: paragraph.text_with_image.field_caption
-field_name: field_caption
+id: paragraph.image_featured_text.field_figcaption
+field_name: field_figcaption
 entity_type: paragraph
-bundle: text_with_image
+bundle: image_featured_text
 label: Caption
 description: ''
 required: false
