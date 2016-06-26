@@ -1,5 +1,8 @@
-{% if content[0]['#markup'] %}
-  <figcaption>
-    {{ content }}
-  </figcaption>
-{% endif %}
+{% for item in items %}
+  {# check for text plain or text formatted #}
+  {% if item.content['#value'] or item.content['#text'] %}
+    <figcaption>
+      {{ item.content }}
+    </figcaption>
+  {% endif %}
+{% endfor %}

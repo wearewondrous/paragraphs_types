@@ -43,29 +43,39 @@ function paragraphs_types_theme() {
     ),
     'paragraph__image_featured_text' => array(
       'render element' => 'element',
-      'template' => 'paragraph--text',
+      'template' => 'paragraph--image-featured-text',
       'base hook' => 'paragraph',
     ),
     'paragraph__video' => array(
       'render element' => 'element',
-      'template' => 'paragraph--text',
+      'template' => 'paragraph--video',
       'base hook' => 'paragraph',
     ),
     'paragraph__gallery' => array(
       'render element' => 'element',
-      'template' => 'paragraph--text',
+      'template' => 'paragraph--gallery',
       'base hook' => 'paragraph',
     ),
     'paragraph__image' => array(
       'render element' => 'element',
-      'template' => 'paragraph--text',
+      'template' => 'paragraph--image',
       'base hook' => 'paragraph',
     ),
-    'paragraph__quote' => array(
+    'paragraph__blockquote' => array(
       'render element' => 'element',
-      'template' => 'paragraph--text',
+      'template' => 'paragraph--blockquote',
       'base hook' => 'paragraph',
-    )
+    ),
+    'field__field_blockquote_footer' => array(
+      'render element' => 'element',
+      'template' => 'fields/field--field-blockquote-footer',
+      'base hook' => 'field',
+    ),
+    'field__field_figcaption' => array(
+      'render element' => 'element',
+      'template' => 'fields/field--field-figcaption',
+      'base hook' => 'field',
+    ),
   );
 }
 

@@ -1,5 +1,8 @@
-{% if content[0]['#markup'] %}
-  <footer>
-    {{ content }}
-  </footer>
-{% endif %}
+{% for item in items %}
+  {# check for text plain or text formatted #}
+  {% if item.content['#value'] or item.content['#text'] %}
+    <footer>
+      {{ item.content }}
+    </footer>
+  {% endif %}
+{% endfor %}

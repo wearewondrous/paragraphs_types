@@ -48,9 +48,6 @@
 <div{{ attributes.addClass(classes) }}>
   <blockquote cite="{{ content.field_blockquote_cite_url }}">
     {{ content.field_body }}
-    {# todo: convert to template, to check for empty state #}
-    <footer>
-      <p class="quote-source">{{ content.field_blockquote_footer }}</p>
-    </footer>
+    {{ content.field_blockquote_footer }}
   </blockquote>
 </div>
