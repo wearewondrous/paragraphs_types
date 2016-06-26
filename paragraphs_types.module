@@ -7,9 +7,10 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use \Drupal\file\Entity\File;
-use \Drupal\image\Plugin\Field\FieldType\ImageItem;
+use Drupal\file\FileInterface;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Render\Element;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Implements hook_help().
@@ -29,6 +30,8 @@ function paragraphs_types_help($route_name, RouteMatchInterface $route_match) {
 
 /**
  * Implements hook_theme().
+ *
+ * Call the base hook from Paragraphs to allow preprocess hooks to work.
  */
 function paragraphs_types_theme() {
   return array(
@@ -65,7 +68,11 @@ function paragraphs_types_theme() {
   );
 }
 
-
+/**
+ * Implements hook_page_attachments().
+ *
+ * Attach CSS/JS libs, if config says so.
+ */
 function paragraphs_types_page_attachments(array &$page) {
   $config = \Drupal::config('paragraphs_types.settings');
 
@@ -75,10 +82,21 @@ function paragraphs_types_page_attachments(array &$page) {
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--image-featured-text.html.twig.
+ *
+ * Convert field render array to single value variable.
+ */
 function paragraphs_types_preprocess_paragraph__image_featured_text(&$variables) {
-  $variables['image_text_layout'] = $variables['paragraph']->get('field_image_text_layout')->value;
+  // field is required, so no empty check needed
+  /** @var Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $variables['image_text_layout'] = $paragraph->get('field_image_text_layout')->value;
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--video.html.twig.
+ */
 function paragraphs_types_preprocess_paragraph__video(&$variables) {
   $videoUrl = $variables['elements']['field_url'][0]['#url']->getUri();
   $parsedUrl = parse_url($videoUrl);
@@ -104,14 +122,18 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
   $variables['video_host'] = $videoHost;
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--gallery.html.twig.
+ */
 function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
+  /** @var Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
   $images = $paragraph->get('field_images');
 
   $variables['images'] = [];
 
   foreach ($images as $item) {
-
+    /* @var $file FileInterface */
     $file = File::load($item->target_id);
 
     $image = [
@@ -122,19 +144,24 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
     ];
 
     $variables['images'][] = $image;
-
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--image.html.twig.
+ */
 function paragraphs_types_preprocess_paragraph__image(&$variables) {
-  $imageField = $variables['paragraph']->get('field_image')->first();
+  /** @var Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $imageField = $paragraph->get('field_image')->first();
+  /* @var $file FileInterface */
   $file = File::load($imageField->target_id);
 
   if (!$file) {
     return FALSE;
   }
 
-  $caption = $variables['paragraph']->get('field_caption')->value;
+  $caption = $paragraph->get('field_caption')->value;
   $variables['image'] = [
     'url' => file_create_url($file->getFileUri()),
     'width' => $imageField->width,
@@ -142,15 +169,20 @@ function paragraphs_types_preprocess_paragraph__image(&$variables) {
     'caption' => $caption,
     'sizes' => _load_image_sizes($file)
   ];
-
 }
 
-function _load_image_sizes($image) {
+/**
+ * @param FileInterface $image
+ * @return array
+ */
+function _load_image_sizes(FileInterface $image) {
   $fileUri = $image->getFileUri();
   $urls = [];
+
   foreach (ImageStyle::loadMultiple() as $image_style) {
     $urls[$image_style->getName()] = $image_style->buildUrl($fileUri);
   }
+
   return $urls;
 }
 
@@ -202,10 +234,9 @@ function paragraphs_types_uninstall() {
     'core.entity_form_display.paragraph.text_with_image.default',
     'core.entity_form_display.paragraph.text.default',
     'core.entity_form_display.paragraph.video.default',
-
   ];
+
   foreach ($files as $file) {
     \Drupal::configFactory()->getEditable($file)->delete();
   }
-
 }
