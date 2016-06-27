@@ -25,6 +25,12 @@ This is a collection of paragraphs types for Drupal 8. This module requires the
   - field_image_text_layout
 - Video	video
 
+## To dos
+
+- convert to field_body in blockquote and image_featured_text
+- convert figcaption, blockquote_footer to text formated
+- add minimal html to figcaption, blockquote_footer
+
 ## Basics
 
 - Highly experimental, do not use in production
