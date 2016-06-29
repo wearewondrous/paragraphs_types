@@ -19,10 +19,10 @@
     }
   ],
   "require": {
-    "drupal/paragraphs": "~8.1.*",
-    "drupal/file_browser": "~8.1.*",
-    "drupal/ctools": "~8.3.*",
-    "drupal/file_entity": "~8.2.*",
+    "drupal/paragraphs": "~1.0",
+    "drupal/file_browser": "~1.0",
+    "drupal/ctools": "~3.0",
+    "drupal/file_entity": "~2.0",
     "composer/installers": "~1.0"
   }
 }
