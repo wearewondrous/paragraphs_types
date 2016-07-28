@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
     });
     gallery.init();
   };
-  $('.open-gallery').on('click', function(event) {
+  $('.js-open-gallery').on('click', function(event) {
     event.preventDefault();
     var imgIndex = 0;
     if ($(this).hasClass('img-thumbnail')) {
