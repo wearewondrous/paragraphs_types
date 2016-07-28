@@ -7,11 +7,12 @@ photoswipe:
     url: https://github.com/dimsemenov/PhotoSwipe/blob/v4.1.1/LICENSE
     gpl-compatible: true
   css:
-    /libraries/PhotoSwipe/dist/photoswipe.css: {}
-    /libraries/PhotoSwipe/dist/default-skin/default-skin.css: {}
+    theme:
+      /libraries/photoswipe/dist/photoswipe.css: {}
+      /libraries/photoswipe/dist/default-skin/default-skin.css: {}
   js:
-    /libraries/PhotoSwipe/dist/photoswipe-ui-default.min.js: {}
-    /libraries/PhotoSwipe/dist/photoswipe.min.js: {}
+    /libraries/photoswipe/dist/photoswipe-ui-default.min.js: {}
+    /libraries/photoswipe/dist/photoswipe.min.js: {}
 
 gallery:
   version: 1.0
