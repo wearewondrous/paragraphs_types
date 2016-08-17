@@ -186,11 +186,17 @@ function paragraphs_types_preprocess_paragraph__image(&$variables) {
  * @param FileInterface $image
  * @return array
  */
-function _load_image_sizes(FileInterface $image) {
+function _load_image_sizes(FileInterface $image, array $sizes = []) {
   $fileUri = $image->getFileUri();
   $urls = [];
 
-  foreach (ImageStyle::loadMultiple() as $image_style) {
+  if (empty($sizes)) {
+    $imageStyles = ImageStyle::loadMultiple();
+  } else {
+    $imageStyles = ImageStyle::loadMultiple($sizes);
+  }
+
+  foreach ($imageStyles as $image_style) {
     $urls[$image_style->getName()] = $image_style->buildUrl($fileUri);
   }
 
