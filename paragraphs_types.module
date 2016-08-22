@@ -98,7 +98,8 @@ function paragraphs_types_page_attachments(array &$page) {
  *
  * Convert field render array to single value variable.
  */
-function paragraphs_types_preprocess_paragraph__image_featured_text(&$variables) {
+function paragraphs_types_preprocess_paragraph__image_featured_text(&$variables
+) {
   // field is required, so no empty check needed
   /** @var Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
@@ -137,34 +138,32 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
  * Implements hook_preprocess_HOOK() for paragraph--gallery.html.twig.
  */
 function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
-  function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
-    /** @var Paragraph $paragraph */
-    $paragraph = $variables['paragraph'];
-    $images = $paragraph->get('field_images');
+  /** @var Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $images = $paragraph->get('field_images');
 
-    $variables['images'] = [];
+  $variables['images'] = [];
 
-    $variables['#attached']['drupalSettings']['ps_images'] = [];
+  $variables['#attached']['drupalSettings']['ps_images'] = [];
 
-    foreach ($images as $item) {
-      /* @var $file FileInterface */
-      $file = File::load($item->target_id);
+  foreach ($images as $item) {
+    /* @var $file FileInterface */
+    $file = File::load($item->target_id);
 
-      $image = [
-        'url' => file_create_url($file->getFileUri()),
-        'width' => $item->width,
-        'height' => $item->height,
-        'sizes' => _load_image_sizes($file, ['medium', 'large'])
-      ];
-      $variables['images'][] = $image;
-      $variables['paragraph_id'] = $paragraph->id();
+    $image = [
+      'url' => file_create_url($file->getFileUri()),
+      'width' => $item->width,
+      'height' => $item->height,
+      'sizes' => _load_image_sizes($file, ['medium', 'large'])
+    ];
+    $variables['images'][] = $image;
+    $variables['paragraph_id'] = $paragraph->id();
 
-      $variables['#attached']['drupalSettings']['ps_images'][$paragraph->id()][] = [
-        'src' => _load_image_sizes($file)['large'],
-        'w' => 0,
-        'h' => 0
-      ];
-    }
+    $variables['#attached']['drupalSettings']['ps_images'][$paragraph->id()][] = [
+      'src' => _load_image_sizes($file)['large'],
+      'w' => 0,
+      'h' => 0
+    ];
   }
 }
 
@@ -202,7 +201,8 @@ function _load_image_sizes(FileInterface $image, array $sizes = []) {
 
   if (empty($sizes)) {
     $imageStyles = ImageStyle::loadMultiple();
-  } else {
+  }
+  else {
     $imageStyles = ImageStyle::loadMultiple($sizes);
   }
 
