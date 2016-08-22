@@ -2,10 +2,10 @@
 
 {% set images_count = images|length %}
 
-{% macro image_block(class, image) %}
+{% macro image_block(class, image, paragraph_id) %}
   {% import _self as self %}
   <div class="{{ class }}">
-    <a href="#" class="gallery-preview-image js-open-gallery" style="background-image: url('{{ image.sizes.medium  }}')"></a>
+    <a href="#" class="gallery-preview-image js-open-gallery" style="background-image: url('{{ image.sizes.medium  }}')" data-paragraph-id="{{ paragraph_id }}"></a>
   </div>
 {% endmacro %}
 
@@ -22,26 +22,26 @@
 
       <div class="row {% if images_count >= 4 %}gallery-first-row{% endif %}">
       {% if images_count == 1 %}
-        {{ self.image_block('gallery-main-preview-column', images[0]) }}
+        {{ self.image_block('gallery-main-preview-column', images[0], paragraph_id) }}
 
       {% elseif images_count == 2 %}
-        {{ self.image_block('gallery-main-preview-column', images[0]) }}
-        {{ self.image_block('gallery-main-preview-column', images[1]) }}
+        {{ self.image_block('gallery-main-preview-column', images[0], paragraph_id) }}
+        {{ self.image_block('gallery-main-preview-column', images[1], paragraph_id) }}
 
       {% elseif images_count == 3 %}
-        {{ self.image_block('gallery-tall-preview-column', images[0]) }}
-        {{ self.image_block('gallery-tall-preview-column', images[1]) }}
-        {{ self.image_block('gallery-main-preview-column', images[2]) }}
+        {{ self.image_block('gallery-tall-preview-column', images[0], paragraph_id) }}
+        {{ self.image_block('gallery-tall-preview-column', images[1], paragraph_id) }}
+        {{ self.image_block('gallery-main-preview-column', images[2], paragraph_id) }}
 
       {% elseif images_count >= 4 %}
-        {{ self.image_block('gallery-tall-preview-column', images[0]) }}
+        {{ self.image_block('gallery-tall-preview-column', images[0], paragraph_id) }}
         <div class="gallery-tall-preview-column collapsed">
           <div class="row">
-            {{ self.image_block('gallery-mini-preview-column', images[1]) }}
-            {{ self.image_block('gallery-mini-preview-column', images[2]) }}
+            {{ self.image_block('gallery-mini-preview-column', images[1], paragraph_id) }}
+            {{ self.image_block('gallery-mini-preview-column', images[2], paragraph_id) }}
           </div>
         </div>
-        {{ self.image_block('gallery-main-preview-column', images[3]) }}
+        {{ self.image_block('gallery-main-preview-column', images[3], paragraph_id) }}
       {% endif %}
       </div>
 
@@ -49,13 +49,13 @@
       <div class="row gallery-second-row">
         <div class="gallery-main-preview-column collapsed">
           <div class="row">
-            {{ self.image_block('gallery-mini-preview-column', images[4]) }}
-            {{ self.image_block('gallery-mini-preview-column', images[5]) }}
-            {{ self.image_block('gallery-mini-preview-column', images[6]) }}
-            {{ self.image_block('gallery-mini-preview-column', images[7]) }}
+            {{ self.image_block('gallery-mini-preview-column', images[4], paragraph_id) }}
+            {{ self.image_block('gallery-mini-preview-column', images[5], paragraph_id) }}
+            {{ self.image_block('gallery-mini-preview-column', images[6], paragraph_id) }}
+            {{ self.image_block('gallery-mini-preview-column', images[7], paragraph_id) }}
           </div>
         </div>
-        {{ self.image_block('gallery-main-preview-column', images[8]) }}
+        {{ self.image_block('gallery-main-preview-column', images[8], paragraph_id) }}
       </div>
       {% endif %}
       <div class="row">
