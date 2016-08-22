@@ -151,7 +151,7 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
     $file = File::load($item->target_id);
 
     $image = [
-      'url' => file_create_url($file->getFileUri()),
+      'url' => file_url_transform_relative(file_create_url($file->getFileUri())),
       'width' => $item->width,
       'height' => $item->height,
       'sizes' => _load_image_sizes($file, ['medium', 'large'])
@@ -207,7 +207,7 @@ function _load_image_sizes(FileInterface $image, array $sizes = []) {
   }
 
   foreach ($imageStyles as $image_style) {
-    $urls[$image_style->getName()] = $image_style->buildUrl($fileUri);
+    $urls[$image_style->getName()] = file_url_transform_relative($image_style->buildUrl($fileUri));
   }
 
   return $urls;
