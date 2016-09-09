@@ -151,7 +151,7 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
     $file = File::load($item->target_id);
 
     $image = [
-      'url' => str_replace('/fr','/', file_url_transform_relative(file_create_url($file->getFileUri()))),
+      'url' => file_url_transform_relative(file_create_url($file->getFileUri())),
       'width' => $item->width,
       'height' => $item->height,
       'sizes' => _load_image_sizes($file, ['medium', 'large'])
