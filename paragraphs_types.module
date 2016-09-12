@@ -174,6 +174,11 @@ function paragraphs_types_preprocess_paragraph__image(&$variables) {
   /** @var Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
   $imageField = $paragraph->get('field_image')->first();
+
+  if(!$imageField instanceof ImageItem || (int) $imageField->target_id <= 0 ) {
+    return FALSE;
+  }
+
   /* @var $file FileInterface */
   $file = File::load($imageField->target_id);
 
