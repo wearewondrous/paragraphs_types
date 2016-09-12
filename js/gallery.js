@@ -39,7 +39,7 @@
     event.preventDefault();
     var imgIndex = 0;
     if ($(this).hasClass('img-thumbnail')) {
-      imgIndex = $('.img-thumbnail').index($(this));
+      imgIndex = $('.gallery-preview-image').index($(this));
     }
     var galleryIndex = $(this).data('paragraph-id');
     openPhotoSwipe(galleryIndex, imgIndex, null);
