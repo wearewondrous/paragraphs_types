@@ -38,7 +38,7 @@
   $('.js-open-gallery').on('click', function(event) {
     event.preventDefault();
     var imgIndex = 0;
-    if ($(this).hasClass('img-thumbnail')) {
+    if ($(this).hasClass('gallery-preview-image')) {
       imgIndex = $('.gallery-preview-image').index($(this));
     }
     var galleryIndex = $(this).data('paragraph-id');
