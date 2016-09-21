@@ -12,6 +12,12 @@
     "issues": "https://github.com/WondrousLLC/paragraphs_types/issues",
     "source": "https://github.com/WondrousLLC/paragraphs_types.git"
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "require": {
     "drupal/paragraphs": "~1.0",
     "drupal/file_browser": "~1.0",
