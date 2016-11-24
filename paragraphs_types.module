@@ -149,6 +149,7 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
   foreach ($images as $item) {
     /* @var $file FileInterface */
     $file = File::load($item->target_id);
+    if($file == null) continue;
 
     $image = [
       'url' => file_url_transform_relative(file_create_url($file->getFileUri())),
