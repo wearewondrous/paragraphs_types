@@ -140,6 +140,11 @@ function paragraphs_types_preprocess_paragraph__video(&$variables) {
 function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
   /** @var Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
+
+  if (!$paragraph->hasField('field_images')) {
+    return;
+  }
+
   $images = $paragraph->get('field_images');
 
   $variables['images'] = [];
@@ -174,6 +179,12 @@ function paragraphs_types_preprocess_paragraph__gallery(&$variables) {
 function paragraphs_types_preprocess_paragraph__image(&$variables) {
   /** @var Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
+
+  if (!$paragraph->hasField('field_image')) {
+    return;
+  }
+
+
   $imageField = $paragraph->get('field_image')->first();
 
   if(!$imageField instanceof ImageItem || (int) $imageField->target_id <= 0 ) {
