@@ -281,6 +281,6 @@ function paragraphs_types_uninstall() {
   ];
 
   foreach ($files as $file) {
-    \Drupal::configFactory()->getEditable($file)->delete();
+    //\Drupal::configFactory()->getEditable($file)->delete();
   }
 }
