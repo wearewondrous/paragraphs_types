@@ -1,6 +1,8 @@
-# Paragraphs types collection
+#Deprecated
 
-![Build status](https://travis-ci.org/WondrousLLC/paragraphs_types.svg?branch=master)
+Will be removed in teh future
+
+# Paragraphs types collection
 
 ## What is it?
 
@@ -105,7 +107,7 @@ then add this git repository:
 ```
 {
   "type": "vcs",
-  "url": "https://github.com/WondrousLLC/paragraph_types"
+  "url": "https://github.com/wearewondrous/paragraph_types"
 }
 ```
 

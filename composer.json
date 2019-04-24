@@ -1,16 +1,16 @@
 {
-  "name": "wondrousllc/paragraphs_types",
+  "name": "wearewondrous/paragraphs_types",
   "type": "drupal-module",
   "description": "Paragraphs types",
   "keywords": [
     "Drupal"
   ],
   "license": "GPL-2.0+",
-  "homepage": "https://github.com/WondrousLLC/paragraphs_types",
+  "homepage": "https://github.com/wearewondrous/paragraphs_types",
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://github.com/WondrousLLC/paragraphs_types/issues",
-    "source": "https://github.com/WondrousLLC/paragraphs_types.git"
+    "issues": "https://github.com/wearewondrous/paragraphs_types/issues",
+    "source": "https://github.com/wearewondrous/paragraphs_types.git"
   },
   "require": {
     "drupal/paragraphs": "~1.0",
